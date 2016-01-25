@@ -7,7 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE6F0F9B1C4F5AC200D69EF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0F9A1C4F5AC200D69EF1 /* main.m */; };
+		5506E9EA1C527B6300F1E7B6 /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5506E9E41C527B6300F1E7B6 /* MLPAutoCompleteTextField.m */; };
+		5506E9EB1C527B6300F1E7B6 /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = 5506E9E91C527B6300F1E7B6 /* NSString+Levenshtein.m */; };
+		552AC9B91C5314A000843EFA /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 552AC9B81C5314A000843EFA /* DataSource.m */; };
+		552AC9BB1C5315BD00843EFA /* station.plist in Resources */ = {isa = PBXBuildFile; fileRef = 552AC9BA1C5315BD00843EFA /* station.plist */; };
+		5568A6E21C5661B200089A7B /* fukuoka.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5568A6D91C5661B200089A7B /* fukuoka.csv */; };
+		5568A6E31C5661B200089A7B /* koube.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5568A6DA1C5661B200089A7B /* koube.csv */; };
+		5568A6E41C5661B200089A7B /* nagoya.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5568A6DB1C5661B200089A7B /* nagoya.csv */; };
+		5568A6E51C5661B200089A7B /* sapporo.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5568A6DC1C5661B200089A7B /* sapporo.csv */; };
+		5568A6E61C5661B200089A7B /* sendai.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5568A6DD1C5661B200089A7B /* sendai.csv */; };
+		5568A6E71C5661B200089A7B /* subway10.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5568A6DE1C5661B200089A7B /* subway10.txt */; };
+		5568A6E81C5661B200089A7B /* subway10.xls in Resources */ = {isa = PBXBuildFile; fileRef = 5568A6DF1C5661B200089A7B /* subway10.xls */; };
+		5568A6E91C5661B200089A7B /* tokyo.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5568A6E01C5661B200089A7B /* tokyo.csv */; };
+		5568A6EA1C5661B200089A7B /* yokohama.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5568A6E11C5661B200089A7B /* yokohama.csv */; };
+		55D4C6FF1C54C0F6004EEC64 /* btn_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D4C6FE1C54C0F6004EEC64 /* btn_search@2x.png */; };
+		55D4C7031C54C718004EEC64 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D4C7021C54C718004EEC64 /* DBManager.m */; };
+		55D4C7051C54CCBB004EEC64 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D4C7041C54CCBB004EEC64 /* libsqlite3.tbd */; };
+		55D4C7131C54CD05004EEC64 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D4C7081C54CD05004EEC64 /* FMDatabase.m */; };
+		55D4C7141C54CD05004EEC64 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D4C70A1C54CD05004EEC64 /* FMDatabaseAdditions.m */; };
+		55D4C7151C54CD05004EEC64 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D4C70C1C54CD05004EEC64 /* FMDatabasePool.m */; };
+		55D4C7161C54CD05004EEC64 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D4C70E1C54CD05004EEC64 /* FMDatabaseQueue.m */; };
+		55D4C7171C54CD05004EEC64 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D4C7111C54CD05004EEC64 /* FMResultSet.m */; };
+		55D4C7181C54CD05004EEC64 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55D4C7121C54CD05004EEC64 /* Info.plist */; };
+		55D4C7191C550489004EEC64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0F9A1C4F5AC200D69EF1 /* main.m */; };
 		CE6F0F9E1C4F5AC200D69EF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0F9D1C4F5AC200D69EF1 /* AppDelegate.m */; };
 		CE6F0FA11C4F5AC200D69EF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0FA01C4F5AC200D69EF1 /* ViewController.m */; };
 		CE6F0FA61C4F5AC200D69EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6F0FA51C4F5AC200D69EF1 /* Assets.xcassets */; };
@@ -15,6 +37,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5506E9E31C527B6300F1E7B6 /* MLPAutoCompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextField.h; sourceTree = "<group>"; };
+		5506E9E41C527B6300F1E7B6 /* MLPAutoCompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPAutoCompleteTextField.m; sourceTree = "<group>"; };
+		5506E9E51C527B6300F1E7B6 /* MLPAutoCompleteTextFieldDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDataSource.h; sourceTree = "<group>"; };
+		5506E9E61C527B6300F1E7B6 /* MLPAutoCompleteTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDelegate.h; sourceTree = "<group>"; };
+		5506E9E71C527B6300F1E7B6 /* MLPAutoCompletionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompletionObject.h; sourceTree = "<group>"; };
+		5506E9E81C527B6300F1E7B6 /* NSString+Levenshtein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Levenshtein.h"; sourceTree = "<group>"; };
+		5506E9E91C527B6300F1E7B6 /* NSString+Levenshtein.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Levenshtein.m"; sourceTree = "<group>"; };
+		552AC9B71C5314A000843EFA /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		552AC9B81C5314A000843EFA /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		552AC9BA1C5315BD00843EFA /* station.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = station.plist; sourceTree = "<group>"; };
+		5568A6D91C5661B200089A7B /* fukuoka.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fukuoka.csv; sourceTree = "<group>"; };
+		5568A6DA1C5661B200089A7B /* koube.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = koube.csv; sourceTree = "<group>"; };
+		5568A6DB1C5661B200089A7B /* nagoya.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nagoya.csv; sourceTree = "<group>"; };
+		5568A6DC1C5661B200089A7B /* sapporo.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sapporo.csv; sourceTree = "<group>"; };
+		5568A6DD1C5661B200089A7B /* sendai.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sendai.csv; sourceTree = "<group>"; };
+		5568A6DE1C5661B200089A7B /* subway10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = subway10.txt; sourceTree = "<group>"; };
+		5568A6DF1C5661B200089A7B /* subway10.xls */ = {isa = PBXFileReference; lastKnownFileType = file; path = subway10.xls; sourceTree = "<group>"; };
+		5568A6E01C5661B200089A7B /* tokyo.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tokyo.csv; sourceTree = "<group>"; };
+		5568A6E11C5661B200089A7B /* yokohama.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = yokohama.csv; sourceTree = "<group>"; };
+		55D4C6FE1C54C0F6004EEC64 /* btn_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_search@2x.png"; sourceTree = "<group>"; };
+		55D4C7011C54C718004EEC64 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		55D4C7021C54C718004EEC64 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		55D4C7041C54CCBB004EEC64 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		55D4C7071C54CD05004EEC64 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		55D4C7081C54CD05004EEC64 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		55D4C7091C54CD05004EEC64 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		55D4C70A1C54CD05004EEC64 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		55D4C70B1C54CD05004EEC64 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		55D4C70C1C54CD05004EEC64 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		55D4C70D1C54CD05004EEC64 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		55D4C70E1C54CD05004EEC64 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		55D4C70F1C54CD05004EEC64 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		55D4C7101C54CD05004EEC64 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		55D4C7111C54CD05004EEC64 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		55D4C7121C54CD05004EEC64 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6F0F961C4F5AC200D69EF1 /* MyAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6F0F9A1C4F5AC200D69EF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CE6F0F9C1C4F5AC200D69EF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -31,15 +88,85 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55D4C7051C54CCBB004EEC64 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5506E9E21C527B6300F1E7B6 /* MLPAutoCompleteTextField */ = {
+			isa = PBXGroup;
+			children = (
+				5506E9E31C527B6300F1E7B6 /* MLPAutoCompleteTextField.h */,
+				5506E9E41C527B6300F1E7B6 /* MLPAutoCompleteTextField.m */,
+				5506E9E51C527B6300F1E7B6 /* MLPAutoCompleteTextFieldDataSource.h */,
+				5506E9E61C527B6300F1E7B6 /* MLPAutoCompleteTextFieldDelegate.h */,
+				5506E9E71C527B6300F1E7B6 /* MLPAutoCompletionObject.h */,
+				5506E9E81C527B6300F1E7B6 /* NSString+Levenshtein.h */,
+				5506E9E91C527B6300F1E7B6 /* NSString+Levenshtein.m */,
+			);
+			path = MLPAutoCompleteTextField;
+			sourceTree = "<group>";
+		};
+		552AC9B61C53147000843EFA /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				552AC9BA1C5315BD00843EFA /* station.plist */,
+				552AC9B71C5314A000843EFA /* DataSource.h */,
+				552AC9B81C5314A000843EFA /* DataSource.m */,
+			);
+			name = Datasource;
+			sourceTree = "<group>";
+		};
+		5568A6D81C5661B200089A7B /* subway10 */ = {
+			isa = PBXGroup;
+			children = (
+				5568A6D91C5661B200089A7B /* fukuoka.csv */,
+				5568A6DA1C5661B200089A7B /* koube.csv */,
+				5568A6DB1C5661B200089A7B /* nagoya.csv */,
+				5568A6DC1C5661B200089A7B /* sapporo.csv */,
+				5568A6DD1C5661B200089A7B /* sendai.csv */,
+				5568A6DE1C5661B200089A7B /* subway10.txt */,
+				5568A6DF1C5661B200089A7B /* subway10.xls */,
+				5568A6E01C5661B200089A7B /* tokyo.csv */,
+				5568A6E11C5661B200089A7B /* yokohama.csv */,
+			);
+			path = subway10;
+			sourceTree = "<group>";
+		};
+		55D4C7001C54C702004EEC64 /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				55D4C7011C54C718004EEC64 /* DBManager.h */,
+				55D4C7021C54C718004EEC64 /* DBManager.m */,
+			);
+			name = DBManager;
+			sourceTree = "<group>";
+		};
+		55D4C7061C54CD05004EEC64 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				55D4C7071C54CD05004EEC64 /* FMDatabase.h */,
+				55D4C7081C54CD05004EEC64 /* FMDatabase.m */,
+				55D4C7091C54CD05004EEC64 /* FMDatabaseAdditions.h */,
+				55D4C70A1C54CD05004EEC64 /* FMDatabaseAdditions.m */,
+				55D4C70B1C54CD05004EEC64 /* FMDatabasePool.h */,
+				55D4C70C1C54CD05004EEC64 /* FMDatabasePool.m */,
+				55D4C70D1C54CD05004EEC64 /* FMDatabaseQueue.h */,
+				55D4C70E1C54CD05004EEC64 /* FMDatabaseQueue.m */,
+				55D4C70F1C54CD05004EEC64 /* FMDB.h */,
+				55D4C7101C54CD05004EEC64 /* FMResultSet.h */,
+				55D4C7111C54CD05004EEC64 /* FMResultSet.m */,
+				55D4C7121C54CD05004EEC64 /* Info.plist */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
 		CE6F0F8D1C4F5AC200D69EF1 = {
 			isa = PBXGroup;
 			children = (
+				55D4C7041C54CCBB004EEC64 /* libsqlite3.tbd */,
 				CE6F0F981C4F5AC200D69EF1 /* MyAlert */,
 				CE6F0F971C4F5AC200D69EF1 /* Products */,
 			);
@@ -56,6 +183,10 @@
 		CE6F0F981C4F5AC200D69EF1 /* MyAlert */ = {
 			isa = PBXGroup;
 			children = (
+				55D4C7061C54CD05004EEC64 /* fmdb */,
+				55D4C7001C54C702004EEC64 /* DBManager */,
+				552AC9B61C53147000843EFA /* Datasource */,
+				5506E9E21C527B6300F1E7B6 /* MLPAutoCompleteTextField */,
 				CE6F0FBA1C4F77DB00D69EF1 /* image */,
 				CE6F0F9C1C4F5AC200D69EF1 /* AppDelegate.h */,
 				CE6F0F9D1C4F5AC200D69EF1 /* AppDelegate.m */,
@@ -71,6 +202,7 @@
 		CE6F0F991C4F5AC200D69EF1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5568A6D81C5661B200089A7B /* subway10 */,
 				CE6F0F9A1C4F5AC200D69EF1 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -79,6 +211,7 @@
 		CE6F0FBA1C4F77DB00D69EF1 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				55D4C6FE1C54C0F6004EEC64 /* btn_search@2x.png */,
 				CE6F0FBB1C4F77DB00D69EF1 /* back@2x.png */,
 			);
 			path = image;
@@ -115,6 +248,7 @@
 				TargetAttributes = {
 					CE6F0F951C4F5AC200D69EF1 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = M9F5QE5W4U;
 					};
 				};
 			};
@@ -141,8 +275,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5568A6E31C5661B200089A7B /* koube.csv in Resources */,
+				5568A6E71C5661B200089A7B /* subway10.txt in Resources */,
 				CE6F0FBC1C4F77DB00D69EF1 /* back@2x.png in Resources */,
+				5568A6EA1C5661B200089A7B /* yokohama.csv in Resources */,
+				5568A6E21C5661B200089A7B /* fukuoka.csv in Resources */,
+				5568A6E41C5661B200089A7B /* nagoya.csv in Resources */,
+				5568A6E81C5661B200089A7B /* subway10.xls in Resources */,
+				5568A6E61C5661B200089A7B /* sendai.csv in Resources */,
 				CE6F0FA61C4F5AC200D69EF1 /* Assets.xcassets in Resources */,
+				55D4C6FF1C54C0F6004EEC64 /* btn_search@2x.png in Resources */,
+				5568A6E51C5661B200089A7B /* sapporo.csv in Resources */,
+				55D4C7181C54CD05004EEC64 /* Info.plist in Resources */,
+				552AC9BB1C5315BD00843EFA /* station.plist in Resources */,
+				5568A6E91C5661B200089A7B /* tokyo.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,9 +299,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55D4C7191C550489004EEC64 /* main.m in Sources */,
+				55D4C7031C54C718004EEC64 /* DBManager.m in Sources */,
 				CE6F0FA11C4F5AC200D69EF1 /* ViewController.m in Sources */,
+				5506E9EB1C527B6300F1E7B6 /* NSString+Levenshtein.m in Sources */,
+				552AC9B91C5314A000843EFA /* DataSource.m in Sources */,
+				5506E9EA1C527B6300F1E7B6 /* MLPAutoCompleteTextField.m in Sources */,
+				55D4C7141C54CD05004EEC64 /* FMDatabaseAdditions.m in Sources */,
+				55D4C7171C54CD05004EEC64 /* FMResultSet.m in Sources */,
 				CE6F0F9E1C4F5AC200D69EF1 /* AppDelegate.m in Sources */,
-				CE6F0F9B1C4F5AC200D69EF1 /* main.m in Sources */,
+				55D4C7151C54CD05004EEC64 /* FMDatabasePool.m in Sources */,
+				55D4C7161C54CD05004EEC64 /* FMDatabaseQueue.m in Sources */,
+				55D4C7131C54CD05004EEC64 /* FMDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,11 +401,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyAlert/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uluru.MyAlert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -258,11 +416,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyAlert/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uluru.MyAlert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -285,6 +446,7 @@
 				CE6F0FAF1C4F5AC200D69EF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

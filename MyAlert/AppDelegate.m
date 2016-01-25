@@ -16,12 +16,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
-    [UINavigationBar appearance].barTintColor = [UIColor whiteColor];
+//    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
+//    [UINavigationBar appearance].barTintColor = [UIColor whiteColor];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    UINavigationController *navC = [[UINavigationController alloc]initWithRootViewController:[[ViewController alloc]init]];
-    self.window.rootViewController = navC;
+    self.window.rootViewController = [[ViewController alloc]init];
     
     [self.window makeKeyAndVisible];
     return YES;
