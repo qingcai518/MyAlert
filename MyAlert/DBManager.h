@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "FMDatabase.h"
+#import "Station.h"
 
 @interface DBManager : NSObject
-- (instancetype) initTables;
-- (NSMutableArray *) getStations:(NSString *)stationName;
-- (void) updateDate:(NSString *)name line:(NSString*)line;
+@property (nonatomic, retain) FMDatabase *db;
++ (NSMutableArray *) getInfoByStationName:(NSString *)name;
 @end

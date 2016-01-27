@@ -39,6 +39,7 @@
     station.returnKeyType = UIReturnKeyDone;
     station.autoCompleteDataSource = self;
     station.delegate = self;
+    [station addTarget:self action:@selector(textFieldChanged:) forControlEvents:UIControlEventEditingChanged];
     [self.view addSubview:station];
     
     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(station.frame), 200, 40, 40)];
@@ -48,7 +49,7 @@
 }
 
 - (void) doSearch {
-    
+    [DBManager getInfoByStationName:stationName];
 }
 
 - (void)didReceiveMemoryWarning {

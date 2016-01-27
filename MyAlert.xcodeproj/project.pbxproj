@@ -22,6 +22,7 @@
 		55D4C7171C54CD05004EEC64 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D4C7111C54CD05004EEC64 /* FMResultSet.m */; };
 		55D4C7181C54CD05004EEC64 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55D4C7121C54CD05004EEC64 /* Info.plist */; };
 		55D4C7191C550489004EEC64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0F9A1C4F5AC200D69EF1 /* main.m */; };
+		55D93C761C59023D0009B1CA /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D93C751C59023D0009B1CA /* Station.m */; };
 		CE6F0F9E1C4F5AC200D69EF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0F9D1C4F5AC200D69EF1 /* AppDelegate.m */; };
 		CE6F0FA11C4F5AC200D69EF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0FA01C4F5AC200D69EF1 /* ViewController.m */; };
 		CE6F0FA61C4F5AC200D69EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6F0FA51C4F5AC200D69EF1 /* Assets.xcassets */; };
@@ -56,6 +57,9 @@
 		55D4C7101C54CD05004EEC64 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		55D4C7111C54CD05004EEC64 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		55D4C7121C54CD05004EEC64 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55D93C721C58F9CE0009B1CA /* station.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = station.db; sourceTree = "<group>"; };
+		55D93C741C59023D0009B1CA /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Station.h; sourceTree = "<group>"; };
+		55D93C751C59023D0009B1CA /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Station.m; sourceTree = "<group>"; };
 		CE6F0F961C4F5AC200D69EF1 /* MyAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6F0F9A1C4F5AC200D69EF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CE6F0F9C1C4F5AC200D69EF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -131,6 +135,15 @@
 			path = fmdb;
 			sourceTree = "<group>";
 		};
+		55D93C731C5901E20009B1CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55D93C741C59023D0009B1CA /* Station.h */,
+				55D93C751C59023D0009B1CA /* Station.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		CE6F0F8D1C4F5AC200D69EF1 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +164,7 @@
 		CE6F0F981C4F5AC200D69EF1 /* MyAlert */ = {
 			isa = PBXGroup;
 			children = (
+				55D93C731C5901E20009B1CA /* Model */,
 				55D4C7061C54CD05004EEC64 /* fmdb */,
 				55D4C7001C54C702004EEC64 /* DBManager */,
 				552AC9B61C53147000843EFA /* Datasource */,
@@ -170,6 +184,7 @@
 		CE6F0F991C4F5AC200D69EF1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				55D93C721C58F9CE0009B1CA /* station.db */,
 				554AC6321C57B5FB006058C3 /* stations.csv */,
 				CE6F0F9A1C4F5AC200D69EF1 /* main.m */,
 			);
@@ -268,6 +283,7 @@
 				55D4C7141C54CD05004EEC64 /* FMDatabaseAdditions.m in Sources */,
 				55D4C7171C54CD05004EEC64 /* FMResultSet.m in Sources */,
 				CE6F0F9E1C4F5AC200D69EF1 /* AppDelegate.m in Sources */,
+				55D93C761C59023D0009B1CA /* Station.m in Sources */,
 				55D4C7151C54CD05004EEC64 /* FMDatabasePool.m in Sources */,
 				55D4C7161C54CD05004EEC64 /* FMDatabaseQueue.m in Sources */,
 				55D4C7131C54CD05004EEC64 /* FMDatabase.m in Sources */,

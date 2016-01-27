@@ -10,6 +10,7 @@
 #import "MLPAutoCompleteTextField.h"
 #import "MLPAutoCompleteTextFieldDelegate.h"
 #import "DataSource.h"
+#import "DBManager.h"
 
 @interface ViewController : UIViewController<UITextFieldDelegate, MLPAutoCompleteTextFieldDataSource>
 @end
