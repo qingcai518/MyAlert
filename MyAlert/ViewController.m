@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+CLLocation *dest;
 @interface ViewController ()
 
 @end
@@ -51,6 +51,11 @@ double baseLongitude;
     
     UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
     [self.view addGestureRecognizer:tapGesture];
+    self.alertController = [UIAlertController alertControllerWithTitle:@"My Alert" message:@"もうすぐ目的地に着きますよ！" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"不要" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"了解" style:UIAlertActionStyleDefault handler:nil];
+    [self.alertController addAction:cancelAction];
+    [self.alertController addAction:okAction];
 }
 
 - (void) handleTapGesture:(UITapGestureRecognizer*)sender {
@@ -70,21 +75,31 @@ double baseLongitude;
         NSString *name = [dic valueForKey:@"name"];
         double latitude = [[dic valueForKey:@"latitude"] doubleValue];
         double longitude = [[dic valueForKey:@"longitude"] doubleValue];
-
-        //GPSの利用可否判断
-        if ([CLLocationManager locationServicesEnabled]) {
+        
+        dest = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
+        
+        if (self.locationManager == nil) {
             self.locationManager = [[CLLocationManager alloc] init];
             self.locationManager.delegate = self;
             self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-            self.locationManager.distanceFilter = 100;
+            self.locationManager.distanceFilter = kCLDistanceFilterNone;
+        }
+        
+        if( [[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0 ) {
+            // iOS8の場合は、以下の何れかの処理を追加しないと位置の取得ができない
+            // アプリがアクティブな場合だけ位置取得する場合
+            //            [self.locationManager requestWhenInUseAuthorization];
+            // アプリが非アクティブな場合でも位置取得する場合
+            [self.locationManager requestAlwaysAuthorization];
+        }
+        
+        //GPSの利用可否判断
+        if ([CLLocationManager locationServicesEnabled]) {
             [self.locationManager startUpdatingLocation];
-            NSLog(@"Start updating location.");
             
-            CLLocation *dest = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
             CLLocation *local = self.locationManager.location;
             CLLocationDistance meters=[local distanceFromLocation:dest];
-            
-            NSLog(@"%f", meters);
+            NSLog(@"最初%f", meters);
         } else {
             NSLog(@"The location services is disabled.");
         }
@@ -103,7 +118,13 @@ double baseLongitude;
     double latitude = newLocation.coordinate.latitude;
     double longitude = newLocation.coordinate.longitude;
     
-    NSLog(@"%f, %f", latitude, longitude);
+    CLLocation *current = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
+    CLLocationDistance meters=[current distanceFromLocation:dest];
+    NSLog(@"経過%f", meters);
+    
+    if (meters <= 16464.3) {
+        [self presentViewController:self.alertController animated:YES completion:nil];
+    }
 }
 
 // 現在地取得に失敗したら

@@ -17,5 +17,6 @@
 @property(nonatomic, strong) MLPAutoCompleteTextField *stationTF;
 @property(nonatomic, strong) NSString *textInput;
 @property(nonatomic, strong) CLLocationManager *locationManager;
+@property(nonatomic, strong) UIAlertController *alertController;
 @end
 
