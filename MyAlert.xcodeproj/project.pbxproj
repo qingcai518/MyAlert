@@ -28,6 +28,8 @@
 		CE784F4B1C59E6FF006F7F1C /* station.csv in Resources */ = {isa = PBXBuildFile; fileRef = CE784F4A1C59E6FF006F7F1C /* station.csv */; };
 		CE784F521C59F6FC006F7F1C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE784F511C59F6FC006F7F1C /* CoreLocation.framework */; };
 		CE784F541C5A06F8006F7F1C /* station.db in Resources */ = {isa = PBXBuildFile; fileRef = CE784F531C5A06F8006F7F1C /* station.db */; };
+		CE784F571C5A190C006F7F1C /* StationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE784F561C5A190C006F7F1C /* StationViewController.m */; };
+		CE784F5B1C5A1CD2006F7F1C /* StationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE784F5A1C5A1CD2006F7F1C /* StationCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,12 +65,16 @@
 		CE6F0F9D1C4F5AC200D69EF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CE6F0F9F1C4F5AC200D69EF1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CE6F0FA01C4F5AC200D69EF1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CE6F0FA51C4F5AC200D69EF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE6F0FAA1C4F5AC200D69EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE6F0FA51C4F5AC200D69EF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MyAlert/Assets.xcassets; sourceTree = "<group>"; };
+		CE6F0FAA1C4F5AC200D69EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = MyAlert/Info.plist; sourceTree = "<group>"; };
 		CE6F0FBB1C4F77DB00D69EF1 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		CE784F4A1C59E6FF006F7F1C /* station.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = station.csv; sourceTree = "<group>"; };
 		CE784F511C59F6FC006F7F1C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CE784F531C5A06F8006F7F1C /* station.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = station.db; sourceTree = "<group>"; };
+		CE784F551C5A190C006F7F1C /* StationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationViewController.h; sourceTree = "<group>"; };
+		CE784F561C5A190C006F7F1C /* StationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationViewController.m; sourceTree = "<group>"; };
+		CE784F591C5A1CD2006F7F1C /* StationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationCell.h; sourceTree = "<group>"; };
+		CE784F5A1C5A1CD2006F7F1C /* StationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +147,8 @@
 			children = (
 				CE784F511C59F6FC006F7F1C /* CoreLocation.framework */,
 				55D4C7041C54CCBB004EEC64 /* libsqlite3.tbd */,
+				CE6F0FA51C4F5AC200D69EF1 /* Assets.xcassets */,
+				CE6F0FAA1C4F5AC200D69EF1 /* Info.plist */,
 				CE6F0F981C4F5AC200D69EF1 /* MyAlert */,
 				CE6F0F971C4F5AC200D69EF1 /* Products */,
 			);
@@ -157,17 +165,18 @@
 		CE6F0F981C4F5AC200D69EF1 /* MyAlert */ = {
 			isa = PBXGroup;
 			children = (
-				55D4C7061C54CD05004EEC64 /* fmdb */,
-				55D4C7001C54C702004EEC64 /* DBManager */,
+				CE784F581C5A1CBA006F7F1C /* Cell */,
 				552AC9B61C53147000843EFA /* Datasource */,
-				5506E9E21C527B6300F1E7B6 /* MLPAutoCompleteTextField */,
+				55D4C7001C54C702004EEC64 /* DBManager */,
+				55D4C7061C54CD05004EEC64 /* fmdb */,
 				CE6F0FBA1C4F77DB00D69EF1 /* image */,
+				5506E9E21C527B6300F1E7B6 /* MLPAutoCompleteTextField */,
 				CE6F0F9C1C4F5AC200D69EF1 /* AppDelegate.h */,
 				CE6F0F9D1C4F5AC200D69EF1 /* AppDelegate.m */,
+				CE784F551C5A190C006F7F1C /* StationViewController.h */,
+				CE784F561C5A190C006F7F1C /* StationViewController.m */,
 				CE6F0F9F1C4F5AC200D69EF1 /* ViewController.h */,
 				CE6F0FA01C4F5AC200D69EF1 /* ViewController.m */,
-				CE6F0FA51C4F5AC200D69EF1 /* Assets.xcassets */,
-				CE6F0FAA1C4F5AC200D69EF1 /* Info.plist */,
 				CE6F0F991C4F5AC200D69EF1 /* Supporting Files */,
 			);
 			path = MyAlert;
@@ -190,6 +199,15 @@
 				CE6F0FBB1C4F77DB00D69EF1 /* back@2x.png */,
 			);
 			path = image;
+			sourceTree = "<group>";
+		};
+		CE784F581C5A1CBA006F7F1C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE784F591C5A1CD2006F7F1C /* StationCell.h */,
+				CE784F5A1C5A1CD2006F7F1C /* StationCell.m */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,9 +293,11 @@
 				5506E9EA1C527B6300F1E7B6 /* MLPAutoCompleteTextField.m in Sources */,
 				55D4C7141C54CD05004EEC64 /* FMDatabaseAdditions.m in Sources */,
 				55D4C7171C54CD05004EEC64 /* FMResultSet.m in Sources */,
+				CE784F571C5A190C006F7F1C /* StationViewController.m in Sources */,
 				CE6F0F9E1C4F5AC200D69EF1 /* AppDelegate.m in Sources */,
 				55D4C7151C54CD05004EEC64 /* FMDatabasePool.m in Sources */,
 				55D4C7161C54CD05004EEC64 /* FMDatabaseQueue.m in Sources */,
+				CE784F5B1C5A1CD2006F7F1C /* StationCell.m in Sources */,
 				55D4C7131C54CD05004EEC64 /* FMDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

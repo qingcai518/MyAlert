@@ -106,9 +106,8 @@ double baseLongitude;
         
         [self.locationManager startUpdatingLocation];
     } else {
-        for (int i = 0; i < array.count; i++) {
-            NSLog(@"%@", array[i]);
-        }
+       StationViewController *nextController =  [[StationViewController alloc] initWithStyle:UITableViewStylePlain data:array];
+        [self presentViewController:nextController animated:YES completion:nil];
     }
 }
 
