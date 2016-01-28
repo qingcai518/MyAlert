@@ -11,7 +11,6 @@
 		5506E9EB1C527B6300F1E7B6 /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = 5506E9E91C527B6300F1E7B6 /* NSString+Levenshtein.m */; };
 		552AC9B91C5314A000843EFA /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 552AC9B81C5314A000843EFA /* DataSource.m */; };
 		552AC9BB1C5315BD00843EFA /* station.plist in Resources */ = {isa = PBXBuildFile; fileRef = 552AC9BA1C5315BD00843EFA /* station.plist */; };
-		554AC6331C57B5FB006058C3 /* stations.csv in Resources */ = {isa = PBXBuildFile; fileRef = 554AC6321C57B5FB006058C3 /* stations.csv */; };
 		55D4C6FF1C54C0F6004EEC64 /* btn_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D4C6FE1C54C0F6004EEC64 /* btn_search@2x.png */; };
 		55D4C7031C54C718004EEC64 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D4C7021C54C718004EEC64 /* DBManager.m */; };
 		55D4C7051C54CCBB004EEC64 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D4C7041C54CCBB004EEC64 /* libsqlite3.tbd */; };
@@ -22,11 +21,13 @@
 		55D4C7171C54CD05004EEC64 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D4C7111C54CD05004EEC64 /* FMResultSet.m */; };
 		55D4C7181C54CD05004EEC64 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55D4C7121C54CD05004EEC64 /* Info.plist */; };
 		55D4C7191C550489004EEC64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0F9A1C4F5AC200D69EF1 /* main.m */; };
-		55D93C761C59023D0009B1CA /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D93C751C59023D0009B1CA /* Station.m */; };
 		CE6F0F9E1C4F5AC200D69EF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0F9D1C4F5AC200D69EF1 /* AppDelegate.m */; };
 		CE6F0FA11C4F5AC200D69EF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0FA01C4F5AC200D69EF1 /* ViewController.m */; };
 		CE6F0FA61C4F5AC200D69EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6F0FA51C4F5AC200D69EF1 /* Assets.xcassets */; };
 		CE6F0FBC1C4F77DB00D69EF1 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6F0FBB1C4F77DB00D69EF1 /* back@2x.png */; };
+		CE784F4B1C59E6FF006F7F1C /* station.csv in Resources */ = {isa = PBXBuildFile; fileRef = CE784F4A1C59E6FF006F7F1C /* station.csv */; };
+		CE784F521C59F6FC006F7F1C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE784F511C59F6FC006F7F1C /* CoreLocation.framework */; };
+		CE784F541C5A06F8006F7F1C /* station.db in Resources */ = {isa = PBXBuildFile; fileRef = CE784F531C5A06F8006F7F1C /* station.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +41,6 @@
 		552AC9B71C5314A000843EFA /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		552AC9B81C5314A000843EFA /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 		552AC9BA1C5315BD00843EFA /* station.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = station.plist; sourceTree = "<group>"; };
-		554AC6321C57B5FB006058C3 /* stations.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stations.csv; sourceTree = "<group>"; };
 		55D4C6FE1C54C0F6004EEC64 /* btn_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_search@2x.png"; sourceTree = "<group>"; };
 		55D4C7011C54C718004EEC64 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		55D4C7021C54C718004EEC64 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
@@ -57,9 +57,6 @@
 		55D4C7101C54CD05004EEC64 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		55D4C7111C54CD05004EEC64 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		55D4C7121C54CD05004EEC64 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55D93C721C58F9CE0009B1CA /* station.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = station.db; sourceTree = "<group>"; };
-		55D93C741C59023D0009B1CA /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Station.h; sourceTree = "<group>"; };
-		55D93C751C59023D0009B1CA /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Station.m; sourceTree = "<group>"; };
 		CE6F0F961C4F5AC200D69EF1 /* MyAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6F0F9A1C4F5AC200D69EF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CE6F0F9C1C4F5AC200D69EF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,6 +66,9 @@
 		CE6F0FA51C4F5AC200D69EF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE6F0FAA1C4F5AC200D69EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6F0FBB1C4F77DB00D69EF1 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		CE784F4A1C59E6FF006F7F1C /* station.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = station.csv; sourceTree = "<group>"; };
+		CE784F511C59F6FC006F7F1C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CE784F531C5A06F8006F7F1C /* station.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = station.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE784F521C59F6FC006F7F1C /* CoreLocation.framework in Frameworks */,
 				55D4C7051C54CCBB004EEC64 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,18 +136,10 @@
 			path = fmdb;
 			sourceTree = "<group>";
 		};
-		55D93C731C5901E20009B1CA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				55D93C741C59023D0009B1CA /* Station.h */,
-				55D93C751C59023D0009B1CA /* Station.m */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 		CE6F0F8D1C4F5AC200D69EF1 = {
 			isa = PBXGroup;
 			children = (
+				CE784F511C59F6FC006F7F1C /* CoreLocation.framework */,
 				55D4C7041C54CCBB004EEC64 /* libsqlite3.tbd */,
 				CE6F0F981C4F5AC200D69EF1 /* MyAlert */,
 				CE6F0F971C4F5AC200D69EF1 /* Products */,
@@ -164,7 +157,6 @@
 		CE6F0F981C4F5AC200D69EF1 /* MyAlert */ = {
 			isa = PBXGroup;
 			children = (
-				55D93C731C5901E20009B1CA /* Model */,
 				55D4C7061C54CD05004EEC64 /* fmdb */,
 				55D4C7001C54C702004EEC64 /* DBManager */,
 				552AC9B61C53147000843EFA /* Datasource */,
@@ -184,8 +176,8 @@
 		CE6F0F991C4F5AC200D69EF1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				55D93C721C58F9CE0009B1CA /* station.db */,
-				554AC6321C57B5FB006058C3 /* stations.csv */,
+				CE784F531C5A06F8006F7F1C /* station.db */,
+				CE784F4A1C59E6FF006F7F1C /* station.csv */,
 				CE6F0F9A1C4F5AC200D69EF1 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -231,7 +223,7 @@
 				TargetAttributes = {
 					CE6F0F951C4F5AC200D69EF1 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = M9F5QE5W4U;
+						DevelopmentTeam = 2K794A54P5;
 					};
 				};
 			};
@@ -259,11 +251,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6F0FBC1C4F77DB00D69EF1 /* back@2x.png in Resources */,
+				CE784F541C5A06F8006F7F1C /* station.db in Resources */,
 				CE6F0FA61C4F5AC200D69EF1 /* Assets.xcassets in Resources */,
 				55D4C6FF1C54C0F6004EEC64 /* btn_search@2x.png in Resources */,
-				554AC6331C57B5FB006058C3 /* stations.csv in Resources */,
 				55D4C7181C54CD05004EEC64 /* Info.plist in Resources */,
 				552AC9BB1C5315BD00843EFA /* station.plist in Resources */,
+				CE784F4B1C59E6FF006F7F1C /* station.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +276,6 @@
 				55D4C7141C54CD05004EEC64 /* FMDatabaseAdditions.m in Sources */,
 				55D4C7171C54CD05004EEC64 /* FMResultSet.m in Sources */,
 				CE6F0F9E1C4F5AC200D69EF1 /* AppDelegate.m in Sources */,
-				55D93C761C59023D0009B1CA /* Station.m in Sources */,
 				55D4C7151C54CD05004EEC64 /* FMDatabasePool.m in Sources */,
 				55D4C7161C54CD05004EEC64 /* FMDatabaseQueue.m in Sources */,
 				55D4C7131C54CD05004EEC64 /* FMDatabase.m in Sources */,

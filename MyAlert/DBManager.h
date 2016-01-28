@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "FMDatabase.h"
-#import "Station.h"
 
 @interface DBManager : NSObject
 @property (nonatomic, retain) FMDatabase *db;
