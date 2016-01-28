@@ -16,26 +16,53 @@
 - (id)initWithStyle:(UITableViewStyle)theStyle data:(NSArray *)data {
     self = [super init];
     if (self != nil) {
-        self.style = theStyle;
         self.contents = data;
     }
     return self;
 }
 
-- (void)loadView
-{
-    UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
-    self.tableView = [[UITableView alloc] initWithFrame:view.bounds style:self.style];
-    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    [view addSubview:self.tableView];
-    self.view = view;
-}
+//- (void)loadView
+//{
+//
+//    self.view = view;
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    CGFloat height = [UIScreen mainScreen].bounds.size.height;
+    CGFloat statusHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
+
+    UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, width, 44 + statusHeight)];
+    
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectZero];
+    title.font = [UIFont boldSystemFontOfSize:16.0];
+    title.textColor = [UIColor whiteColor];
+    
+    //创建navbaritem
+    UINavigationItem *item = [[UINavigationItem alloc] initWithTitle:@"候補一覧"];
+//    UINavigationItem *item = [[UINavigationItem alloc]init];
+    item.titleView = title;
+    [navigationBar pushNavigationItem:item animated:NO];
+    //设置barbutton
+    item.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(goBack:)];
+    [navigationBar setItems:[NSArray arrayWithObject:item]];
+    navigationBar.tintColor = [UIColor blueColor];
+    [self.view addSubview:navigationBar];
+    
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44 + statusHeight, width, height - 44 - statusHeight)];
+    tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    tableView.dataSource = self;
+    tableView.delegate = self;
+    tableView.tableFooterView = [[UIView alloc] init];
+    [self.view addSubview:tableView];
 }
+
+//カメラボタンが押されたときに呼ばれるメソッド
+-(void)goBack:(UIBarButtonItem*)item{
+    NSLog(@"ボタンを押されましたね");
+}
+
 
 #pragma mark - Table view data source
 
@@ -73,10 +100,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    DetailViewController *nextController = [[DetailViewController alloc]init];
-//    
-//    nextController.myBook = _myBook[indexPath.row];
-//    [self presentViewController:nextController animated:YES completion:nil];
+    //    DetailViewController *nextController = [[DetailViewController alloc]init];
+    //
+    //    nextController.myBook = _myBook[indexPath.row];
+    //    [self presentViewController:nextController animated:YES completion:nil];
 }
 
 @end

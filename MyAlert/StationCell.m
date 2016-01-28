@@ -12,33 +12,31 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self !=nil) {
+        _height = 65;
+    }
     return self;
 }
 
 - (void) setContents:(NSDictionary *)dic {
-    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
     NSString *name = [dic valueForKey:@"name"];
     NSString *line = [dic valueForKey:@"line"];
     NSString *place = [dic valueForKey:@"place"];
 //    double latitude = [[dic valueForKey:@"latitude"]doubleValue];
 //    double longitude = [[dic valueForKey:@"longitude"]doubleValue];
-    
-    UIFont *nameFont = [UIFont fontWithName:@"AvenirNext-Bold" size:20];
-    CGSize nameSize = [name sizeWithAttributes:@{NSFontAttributeName:nameFont}];
-    UILabel *nameLbl = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, nameSize.width, nameSize.height)];
+
+    UILabel *nameLbl = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, width, 20)];
     nameLbl.text = name;
-    nameLbl.font = nameFont;
+    nameLbl.font = [UIFont fontWithName:@"AvenirNext-Bold" size:20];
     [self addSubview:nameLbl];
-    
-    UIFont *infoFont = [UIFont fontWithName:@"AvenirNext" size:20];
+
     NSString *infoText = [NSString stringWithFormat:@"%@  %@", place, line];
-    CGSize infoSize = [name sizeWithAttributes:@{NSFontAttributeName:nameFont}];
-    UILabel *infoLbl = [[UILabel alloc] initWithFrame:CGRectMake(screenWidth - 10 - infoSize.width, 10, infoSize.width, infoSize.height)];
+    UILabel *infoLbl = [[UILabel alloc] initWithFrame:CGRectMake(10, 40, width, 15)];
     infoLbl.text = infoText;
-    infoLbl.font = infoFont;
+    infoLbl.textColor = [UIColor grayColor];
+    infoLbl.font = [UIFont fontWithName:@"Avenir-Light" size:15];
     [self addSubview:infoLbl];
-    
-    _height = CGRectGetMaxY(nameLbl.frame) + 10;
 }
 
 @end
