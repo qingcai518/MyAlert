@@ -8,9 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 #import "StationCell.h"
+#import "UIView+Toast.h"
 
-@interface StationViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface StationViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
+
 @property (nonatomic, strong) NSArray *contents;
+@property(nonatomic, strong) CLLocationManager *locationManager;
+
 - (id)initWithStyle:(UITableViewStyle)theStyle data:(NSArray *)data;
+
 @end

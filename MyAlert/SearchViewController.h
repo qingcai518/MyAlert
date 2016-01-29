@@ -12,12 +12,9 @@
 #import "DataSource.h"
 #import "DBManager.h"
 #import "StationViewController.h"
-#import <CoreLocation/CoreLocation.h>
 
-@interface ViewController : UIViewController<UITextFieldDelegate, MLPAutoCompleteTextFieldDataSource, CLLocationManagerDelegate>
+@interface SearchViewController : UIViewController<UITextFieldDelegate, MLPAutoCompleteTextFieldDataSource>
 @property(nonatomic, strong) MLPAutoCompleteTextField *stationTF;
 @property(nonatomic, strong) NSString *textInput;
-@property(nonatomic, strong) CLLocationManager *locationManager;
-@property(nonatomic, strong) UIAlertController *alertController;
 @end
 

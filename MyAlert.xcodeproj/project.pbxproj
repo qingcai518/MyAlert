@@ -22,9 +22,13 @@
 		55D4C7181C54CD05004EEC64 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55D4C7121C54CD05004EEC64 /* Info.plist */; };
 		55D4C7191C550489004EEC64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0F9A1C4F5AC200D69EF1 /* main.m */; };
 		CE6F0F9E1C4F5AC200D69EF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0F9D1C4F5AC200D69EF1 /* AppDelegate.m */; };
-		CE6F0FA11C4F5AC200D69EF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0FA01C4F5AC200D69EF1 /* ViewController.m */; };
+		CE6F0FA11C4F5AC200D69EF1 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0FA01C4F5AC200D69EF1 /* SearchViewController.m */; };
 		CE6F0FA61C4F5AC200D69EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6F0FA51C4F5AC200D69EF1 /* Assets.xcassets */; };
 		CE6F0FBC1C4F77DB00D69EF1 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6F0FBB1C4F77DB00D69EF1 /* back@2x.png */; };
+		CE6FF8FC1C5B66B000708998 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6FF8FB1C5B66B000708998 /* AppConstants.m */; };
+		CE6FF9001C5B6E7D00708998 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6FF8FF1C5B6E7D00708998 /* UIView+Toast.m */; };
+		CE6FF9041C5B74EE00708998 /* unfortunately@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6FF9031C5B74EE00708998 /* unfortunately@2x.png */; };
+		CE6FF9061C5B75F100708998 /* ok@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6FF9051C5B75F100708998 /* ok@2x.png */; };
 		CE784F4B1C59E6FF006F7F1C /* station.csv in Resources */ = {isa = PBXBuildFile; fileRef = CE784F4A1C59E6FF006F7F1C /* station.csv */; };
 		CE784F521C59F6FC006F7F1C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE784F511C59F6FC006F7F1C /* CoreLocation.framework */; };
 		CE784F541C5A06F8006F7F1C /* station.db in Resources */ = {isa = PBXBuildFile; fileRef = CE784F531C5A06F8006F7F1C /* station.db */; };
@@ -63,11 +67,17 @@
 		CE6F0F9A1C4F5AC200D69EF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CE6F0F9C1C4F5AC200D69EF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE6F0F9D1C4F5AC200D69EF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CE6F0F9F1C4F5AC200D69EF1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CE6F0FA01C4F5AC200D69EF1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CE6F0F9F1C4F5AC200D69EF1 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		CE6F0FA01C4F5AC200D69EF1 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		CE6F0FA51C4F5AC200D69EF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MyAlert/Assets.xcassets; sourceTree = "<group>"; };
 		CE6F0FAA1C4F5AC200D69EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = MyAlert/Info.plist; sourceTree = "<group>"; };
 		CE6F0FBB1C4F77DB00D69EF1 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		CE6FF8FA1C5B66B000708998 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
+		CE6FF8FB1C5B66B000708998 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
+		CE6FF8FE1C5B6E7D00708998 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		CE6FF8FF1C5B6E7D00708998 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		CE6FF9031C5B74EE00708998 /* unfortunately@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unfortunately@2x.png"; sourceTree = "<group>"; };
+		CE6FF9051C5B75F100708998 /* ok@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ok@2x.png"; sourceTree = "<group>"; };
 		CE784F4A1C59E6FF006F7F1C /* station.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = station.csv; sourceTree = "<group>"; };
 		CE784F511C59F6FC006F7F1C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CE784F531C5A06F8006F7F1C /* station.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = station.db; sourceTree = "<group>"; };
@@ -165,6 +175,8 @@
 		CE6F0F981C4F5AC200D69EF1 /* MyAlert */ = {
 			isa = PBXGroup;
 			children = (
+				CE6FF8FD1C5B6E7D00708998 /* Toast */,
+				CE6FF8F91C5B669800708998 /* Utility */,
 				CE784F581C5A1CBA006F7F1C /* Cell */,
 				552AC9B61C53147000843EFA /* Datasource */,
 				55D4C7001C54C702004EEC64 /* DBManager */,
@@ -175,8 +187,8 @@
 				CE6F0F9D1C4F5AC200D69EF1 /* AppDelegate.m */,
 				CE784F551C5A190C006F7F1C /* StationViewController.h */,
 				CE784F561C5A190C006F7F1C /* StationViewController.m */,
-				CE6F0F9F1C4F5AC200D69EF1 /* ViewController.h */,
-				CE6F0FA01C4F5AC200D69EF1 /* ViewController.m */,
+				CE6F0F9F1C4F5AC200D69EF1 /* SearchViewController.h */,
+				CE6F0FA01C4F5AC200D69EF1 /* SearchViewController.m */,
 				CE6F0F991C4F5AC200D69EF1 /* Supporting Files */,
 			);
 			path = MyAlert;
@@ -195,10 +207,30 @@
 		CE6F0FBA1C4F77DB00D69EF1 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				CE6FF9051C5B75F100708998 /* ok@2x.png */,
+				CE6FF9031C5B74EE00708998 /* unfortunately@2x.png */,
 				55D4C6FE1C54C0F6004EEC64 /* btn_search@2x.png */,
 				CE6F0FBB1C4F77DB00D69EF1 /* back@2x.png */,
 			);
 			path = image;
+			sourceTree = "<group>";
+		};
+		CE6FF8F91C5B669800708998 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				CE6FF8FA1C5B66B000708998 /* AppConstants.h */,
+				CE6FF8FB1C5B66B000708998 /* AppConstants.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		CE6FF8FD1C5B6E7D00708998 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				CE6FF8FE1C5B6E7D00708998 /* UIView+Toast.h */,
+				CE6FF8FF1C5B6E7D00708998 /* UIView+Toast.m */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		CE784F581C5A1CBA006F7F1C /* Cell */ = {
@@ -241,7 +273,7 @@
 				TargetAttributes = {
 					CE6F0F951C4F5AC200D69EF1 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = M9F5QE5W4U;
+						DevelopmentTeam = 2K794A54P5;
 					};
 				};
 			};
@@ -269,11 +301,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6F0FBC1C4F77DB00D69EF1 /* back@2x.png in Resources */,
+				CE6FF9041C5B74EE00708998 /* unfortunately@2x.png in Resources */,
 				CE784F541C5A06F8006F7F1C /* station.db in Resources */,
 				CE6F0FA61C4F5AC200D69EF1 /* Assets.xcassets in Resources */,
 				55D4C6FF1C54C0F6004EEC64 /* btn_search@2x.png in Resources */,
 				55D4C7181C54CD05004EEC64 /* Info.plist in Resources */,
 				552AC9BB1C5315BD00843EFA /* station.plist in Resources */,
+				CE6FF9061C5B75F100708998 /* ok@2x.png in Resources */,
 				CE784F4B1C59E6FF006F7F1C /* station.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,13 +321,15 @@
 			files = (
 				55D4C7191C550489004EEC64 /* main.m in Sources */,
 				55D4C7031C54C718004EEC64 /* DBManager.m in Sources */,
-				CE6F0FA11C4F5AC200D69EF1 /* ViewController.m in Sources */,
+				CE6F0FA11C4F5AC200D69EF1 /* SearchViewController.m in Sources */,
 				5506E9EB1C527B6300F1E7B6 /* NSString+Levenshtein.m in Sources */,
 				552AC9B91C5314A000843EFA /* DataSource.m in Sources */,
 				5506E9EA1C527B6300F1E7B6 /* MLPAutoCompleteTextField.m in Sources */,
 				55D4C7141C54CD05004EEC64 /* FMDatabaseAdditions.m in Sources */,
 				55D4C7171C54CD05004EEC64 /* FMResultSet.m in Sources */,
+				CE6FF9001C5B6E7D00708998 /* UIView+Toast.m in Sources */,
 				CE784F571C5A190C006F7F1C /* StationViewController.m in Sources */,
+				CE6FF8FC1C5B66B000708998 /* AppConstants.m in Sources */,
 				CE6F0F9E1C4F5AC200D69EF1 /* AppDelegate.m in Sources */,
 				55D4C7151C54CD05004EEC64 /* FMDatabasePool.m in Sources */,
 				55D4C7161C54CD05004EEC64 /* FMDatabaseQueue.m in Sources */,
