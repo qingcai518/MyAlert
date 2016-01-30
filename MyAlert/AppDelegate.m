@@ -16,7 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:46/255.0 green:139/255.0 blue:87/255.0 alpha:1.0];
+    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:0.157 green:0.157 blue:1 alpha:1];
     [UINavigationBar appearance].tintColor = [UIColor whiteColor];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

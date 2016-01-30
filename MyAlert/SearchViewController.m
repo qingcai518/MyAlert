@@ -14,7 +14,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     CGRect rect = [[UIScreen mainScreen] bounds];
-    UIImageView *backImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"back.png"]];
+    UIImageView *backImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"home.jpg"]];
     backImage.userInteractionEnabled = YES;
     backImage.frame = CGRectMake(0, 0, rect.size.width, rect.size.height);
     

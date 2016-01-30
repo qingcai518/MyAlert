@@ -125,7 +125,7 @@ double baseLongitude;
                                          duration:2.0
                                          position:CSToastPositionCenter
                                             title:nil
-                                            image:[UIImage imageNamed:@"ok.png"]
+                                            image:[UIImage imageNamed:@"sucess.jpg"]
                                             style:nil
                                        completion:nil];
     } else {
@@ -133,12 +133,14 @@ double baseLongitude;
                                          duration:2.0
                                          position:CSToastPositionCenter
                                             title:nil
-                                            image:[UIImage imageNamed:@"unfortunately.png"]
+                                            image:[UIImage imageNamed:@"fail.jpg"]
                                             style:nil
                                        completion:nil];
     }
     
     [self.locationManager startUpdatingLocation];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
@@ -153,6 +155,7 @@ double baseLongitude;
     
     if (distance < 500) {
         NSLog(@"もうすぐ到着だよ！%f", distance);
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     }
 }
 
