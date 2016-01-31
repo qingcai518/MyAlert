@@ -12,6 +12,7 @@
 #import <AudioToolbox/AudioServices.h>
 #import "StationCell.h"
 #import "UIView+Toast.h"
+#import "JCAlertView.h"
 
 @interface StationViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
 

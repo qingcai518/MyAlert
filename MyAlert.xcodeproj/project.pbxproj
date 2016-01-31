@@ -11,6 +11,10 @@
 		5506E9EB1C527B6300F1E7B6 /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = 5506E9E91C527B6300F1E7B6 /* NSString+Levenshtein.m */; };
 		552AC9B91C5314A000843EFA /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 552AC9B81C5314A000843EFA /* DataSource.m */; };
 		552AC9BB1C5315BD00843EFA /* station.plist in Resources */ = {isa = PBXBuildFile; fileRef = 552AC9BA1C5315BD00843EFA /* station.plist */; };
+		558A1FE71C5DBD9000757644 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558A1FE61C5DBD9000757644 /* MapKit.framework */; };
+		558A1FE91C5E422600757644 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558A1FE81C5E422600757644 /* Accelerate.framework */; };
+		558A1FEE1C5E468D00757644 /* JCAlertView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 558A1FEB1C5E468D00757644 /* JCAlertView.bundle */; };
+		558A1FEF1C5E468D00757644 /* JCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 558A1FED1C5E468D00757644 /* JCAlertView.m */; };
 		55D4C6FF1C54C0F6004EEC64 /* btn_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D4C6FE1C54C0F6004EEC64 /* btn_search@2x.png */; };
 		55D4C7031C54C718004EEC64 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D4C7021C54C718004EEC64 /* DBManager.m */; };
 		55D4C7051C54CCBB004EEC64 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D4C7041C54CCBB004EEC64 /* libsqlite3.tbd */; };
@@ -50,6 +54,11 @@
 		552AC9B71C5314A000843EFA /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		552AC9B81C5314A000843EFA /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 		552AC9BA1C5315BD00843EFA /* station.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = station.plist; sourceTree = "<group>"; };
+		558A1FE61C5DBD9000757644 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		558A1FE81C5E422600757644 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		558A1FEB1C5E468D00757644 /* JCAlertView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JCAlertView.bundle; sourceTree = "<group>"; };
+		558A1FEC1C5E468D00757644 /* JCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCAlertView.h; sourceTree = "<group>"; };
+		558A1FED1C5E468D00757644 /* JCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCAlertView.m; sourceTree = "<group>"; };
 		55D4C6FE1C54C0F6004EEC64 /* btn_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_search@2x.png"; sourceTree = "<group>"; };
 		55D4C7011C54C718004EEC64 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		55D4C7021C54C718004EEC64 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
@@ -99,8 +108,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				558A1FE91C5E422600757644 /* Accelerate.framework in Frameworks */,
 				55EA48B91C5D13D200B00080 /* AudioToolbox.framework in Frameworks */,
 				CE784F521C59F6FC006F7F1C /* CoreLocation.framework in Frameworks */,
+				558A1FE71C5DBD9000757644 /* MapKit.framework in Frameworks */,
 				55D4C7051C54CCBB004EEC64 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,6 +141,16 @@
 				552AC9B81C5314A000843EFA /* DataSource.m */,
 			);
 			name = Datasource;
+			sourceTree = "<group>";
+		};
+		558A1FEA1C5E468D00757644 /* JCAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				558A1FEB1C5E468D00757644 /* JCAlertView.bundle */,
+				558A1FEC1C5E468D00757644 /* JCAlertView.h */,
+				558A1FED1C5E468D00757644 /* JCAlertView.m */,
+			);
+			path = JCAlertView;
 			sourceTree = "<group>";
 		};
 		55D4C7001C54C702004EEC64 /* DBManager */ = {
@@ -163,6 +184,8 @@
 		CE6F0F8D1C4F5AC200D69EF1 = {
 			isa = PBXGroup;
 			children = (
+				558A1FE81C5E422600757644 /* Accelerate.framework */,
+				558A1FE61C5DBD9000757644 /* MapKit.framework */,
 				55EA48B81C5D13D200B00080 /* AudioToolbox.framework */,
 				CE784F511C59F6FC006F7F1C /* CoreLocation.framework */,
 				55D4C7041C54CCBB004EEC64 /* libsqlite3.tbd */,
@@ -184,6 +207,7 @@
 		CE6F0F981C4F5AC200D69EF1 /* MyAlert */ = {
 			isa = PBXGroup;
 			children = (
+				558A1FEA1C5E468D00757644 /* JCAlertView */,
 				CE6FF8FD1C5B6E7D00708998 /* Toast */,
 				CE6FF8F91C5B669800708998 /* Utility */,
 				CE784F581C5A1CBA006F7F1C /* Cell */,
@@ -286,6 +310,14 @@
 					CE6F0F951C4F5AC200D69EF1 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = M9F5QE5W4U;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -312,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				558A1FEE1C5E468D00757644 /* JCAlertView.bundle in Resources */,
 				CE784F541C5A06F8006F7F1C /* station.db in Resources */,
 				CE6F0FA61C4F5AC200D69EF1 /* Assets.xcassets in Resources */,
 				55EA48B11C5D0F4200B00080 /* sucess@2x.jpg in Resources */,
@@ -348,6 +381,7 @@
 				55D4C7151C54CD05004EEC64 /* FMDatabasePool.m in Sources */,
 				55D4C7161C54CD05004EEC64 /* FMDatabaseQueue.m in Sources */,
 				CE784F5B1C5A1CD2006F7F1C /* StationCell.m in Sources */,
+				558A1FEF1C5E468D00757644 /* JCAlertView.m in Sources */,
 				55D4C7131C54CD05004EEC64 /* FMDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

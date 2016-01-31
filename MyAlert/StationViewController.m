@@ -14,6 +14,9 @@
 CLLocation *dest;
 double baseLatitude;
 double baseLongitude;
+BOOL iShouldShowAlert;
+BOOL iShouldKeepBuzzing;
+int alertDistance = 500;
 
 @implementation StationViewController
 - (id)initWithStyle:(UITableViewStyle)theStyle data:(NSArray *)data {
@@ -91,8 +94,8 @@ double baseLongitude;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *dic = self.contents[indexPath.row];
-    NSString *place = [dic valueForKey:@"place"];
-    NSString *line = [dic valueForKey:@"line"];
+//    NSString *place = [dic valueForKey:@"place"];
+//    NSString *line = [dic valueForKey:@"line"];
     NSString *name = [dic valueForKey:@"name"];
     double latitude = [[dic valueForKey:@"latitude"] doubleValue];
     double longitude = [[dic valueForKey:@"longitude"] doubleValue];
@@ -112,6 +115,8 @@ double baseLongitude;
         //            [self.locationManager requestWhenInUseAuthorization];
         // アプリが非アクティブな場合でも位置取得する場合
         [self.locationManager requestAlwaysAuthorization];
+        [self.locationManager setAllowsBackgroundLocationUpdates:YES];
+        [self.locationManager startMonitoringSignificantLocationChanges];
     }
     
     //GPSの利用可否判断
@@ -138,6 +143,9 @@ double baseLongitude;
                                        completion:nil];
     }
     
+    iShouldShowAlert = YES;
+    iShouldKeepBuzzing = YES;
+    
     [self.locationManager startUpdatingLocation];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -153,16 +161,31 @@ double baseLongitude;
     CLLocationDistance distance = [current distanceFromLocation:dest];
     NSLog(@"経過%f", distance);
     
-    if (distance < 500) {
+    if (distance < alertDistance && iShouldShowAlert) {
         NSLog(@"もうすぐ到着だよ！%f", distance);
+        iShouldShowAlert = NO;
+        [JCAlertView showTwoButtonsWithTitle:@"My Alert" Message:[NSString stringWithFormat:@"もうすぐ到着だよ!\n後%dメートル",alertDistance] ButtonType:JCAlertViewButtonTypeCancel ButtonTitle:@"閉じる" Click:^{
+            iShouldKeepBuzzing = NO;
+            iShouldShowAlert = NO;
+            [self.locationManager stopUpdatingLocation];
+        } ButtonType:JCAlertViewButtonTypeDefault ButtonTitle:@"再通知" Click:^{
+            iShouldKeepBuzzing = NO;
+            iShouldShowAlert = YES;
+            alertDistance = 200;
+        }];
+
+        AudioServicesAddSystemSoundCompletion(kSystemSoundID_Vibrate, NULL, NULL, MyAudioServicesSystemSoundCompletionProc, NULL);
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     }
 }
 
-// 現在地取得に失敗したら
-- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
-    [self.locationManager stopUpdatingLocation];
+void MyAudioServicesSystemSoundCompletionProc(SystemSoundID ssID, void *clientData) {
+    if (iShouldKeepBuzzing) {
+        [NSThread sleepForTimeInterval:(NSTimeInterval)0.5];
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    } else {
+        AudioServicesRemoveSystemSoundCompletion(kSystemSoundID_Vibrate);
+    }
 }
-
 
 @end
