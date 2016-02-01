@@ -129,8 +129,11 @@ int alertDistance = 500;
         [self.navigationController popViewControllerAnimated:YES];
         
         [self.selectStations addObject:dic];
-        NSDictionary *dataDict = [NSDictionary dictionaryWithObject:self.selectStations forKey:@"stations"];
+        NSMutableDictionary *dataDict = [NSMutableDictionary dictionaryWithObject:self.selectStations forKey:@"stations"];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"RegisterCompletionNotification" object:nil userInfo:dataDict];
+        
+        NSMutableDictionary *distanceDict = [NSMutableDictionary dictionaryWithObject:self.locationManager.location  forKey:@"currentLocation"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"CurrentLocationNotification" object:nil userInfo:distanceDict];
         
         [self dismissViewControllerAnimated:YES completion:nil];
     } else {
@@ -159,6 +162,9 @@ int alertDistance = 500;
     
     CLLocation *current = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
     
+    NSMutableDictionary *distanceDict = [NSMutableDictionary dictionaryWithObject:current forKey:@"currentLocation"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"CurrentLocationNotification" object:nil userInfo:distanceDict];
+    
     for (NSDictionary *dic in self.selectStations) {
         double latitude = [[dic valueForKey:@"latitude"] doubleValue];
         double longitude = [[dic valueForKey:@"longitude"] doubleValue];
@@ -171,24 +177,6 @@ int alertDistance = 500;
         if (distance < alertDistance && iShouldShowAlert) {
             NSLog(@"もうすぐ%@に到着だよ！%f", name, distance);
             iShouldShowAlert = NO;
-            
-            
-//            UIApplication *app = [UIApplication sharedApplication];
-//            if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
-//                [app registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
-//                
-//            }
-//
-//            UILocalNotification *notification = [[UILocalNotification alloc] init];
-//            NSDate* now = [NSDate dateWithTimeIntervalSinceNow:[[NSTimeZone systemTimeZone] secondsFromGMT] + 30];
-//            notification.fireDate = now;
-//            notification.timeZone = [NSTimeZone localTimeZone];
-//            notification.alertAction = @"title of notification";
-//            notification.alertBody = @"message of notification";
-//            
-//            notification.soundName = UILocalNotificationDefaultSoundName;
-//            notification.applicationIconBadgeNumber = 3;
-//            [app scheduleLocalNotification:notification];
 
             [JCAlertView showTwoButtonsWithTitle:@"My Alert" Message:[NSString stringWithFormat:@"もうすぐ%@に到着だよ!\n後%dメートル",name,alertDistance] ButtonType:JCAlertViewButtonTypeCancel ButtonTitle:@"閉じる" Click:^{
                 iShouldKeepBuzzing = NO;

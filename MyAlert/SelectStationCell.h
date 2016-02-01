@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface SelectStationCell : UITableViewCell
-
+@property (nonatomic, assign) CGFloat height;
+- (void) setContents:(NSDictionary *)dic current:(CLLocation*)current;
 @end

@@ -14,6 +14,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(registerCompletion:) name:@"RegisterCompletionNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(currentLocation:) name:@"CurrentLocationNotification" object:nil];
     
     CGRect rect = [[UIScreen mainScreen] bounds];
     UIImageView *backImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"home.jpg"]];
@@ -132,6 +133,11 @@
     [self showParts];
 }
 
+-(void)currentLocation:(NSNotification*)notification {
+    self.current = [[notification userInfo] valueForKey:@"currentLocation"];
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -147,19 +153,14 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    StationCell *cell = [self getCell:(int)indexPath.row tableView:tableView];
+    SelectStationCell *cell = [self getCell:(int)indexPath.row tableView:tableView];
     return cell.height;
 }
 
-- (StationCell *)getCell:(int)index tableView:(UITableView *)tableView {
-//    NSString *cellId = @"id1";
-//    StationCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-//    if (!cell) {
-//        cell = [[StationCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-//    }
-    StationCell *cell = [[StationCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+- (SelectStationCell *)getCell:(int)index tableView:(UITableView *)tableView {
+    SelectStationCell *cell = [[SelectStationCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     NSDictionary *dic = self.stations[index];
-    [cell setContents:dic];
+    [cell setContents:dic current:self.current];
     return cell;
 }
 
