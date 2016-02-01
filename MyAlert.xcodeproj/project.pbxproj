@@ -34,6 +34,8 @@
 		55EA48BC1C5D13F700B00080 /* AppUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EA48BB1C5D13F700B00080 /* AppUtility.m */; };
 		CE69E8691C5F196500A730BE /* Stations.csv in Resources */ = {isa = PBXBuildFile; fileRef = CE69E8681C5F196500A730BE /* Stations.csv */; };
 		CE69E86B1C5F197500A730BE /* station.db in Resources */ = {isa = PBXBuildFile; fileRef = CE69E86A1C5F197500A730BE /* station.db */; };
+		CE69E8721C5F5D2B00A730BE /* UIColor+AppExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CE69E8711C5F5D2B00A730BE /* UIColor+AppExtension.m */; };
+		CE69E8751C5F5DCC00A730BE /* SelectStationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE69E8741C5F5DCC00A730BE /* SelectStationCell.m */; };
 		CE6F0F9E1C4F5AC200D69EF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0F9D1C4F5AC200D69EF1 /* AppDelegate.m */; };
 		CE6F0FA11C4F5AC200D69EF1 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0FA01C4F5AC200D69EF1 /* SearchViewController.m */; };
 		CE6F0FA61C4F5AC200D69EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6F0FA51C4F5AC200D69EF1 /* Assets.xcassets */; };
@@ -86,6 +88,10 @@
 		55EA48BB1C5D13F700B00080 /* AppUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtility.m; sourceTree = "<group>"; };
 		CE69E8681C5F196500A730BE /* Stations.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Stations.csv; sourceTree = "<group>"; };
 		CE69E86A1C5F197500A730BE /* station.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = station.db; sourceTree = "<group>"; };
+		CE69E8701C5F5D2B00A730BE /* UIColor+AppExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AppExtension.h"; sourceTree = "<group>"; };
+		CE69E8711C5F5D2B00A730BE /* UIColor+AppExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AppExtension.m"; sourceTree = "<group>"; };
+		CE69E8731C5F5DCC00A730BE /* SelectStationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectStationCell.h; sourceTree = "<group>"; };
+		CE69E8741C5F5DCC00A730BE /* SelectStationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectStationCell.m; sourceTree = "<group>"; };
 		CE6F0F961C4F5AC200D69EF1 /* MyAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6F0F9A1C4F5AC200D69EF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CE6F0F9C1C4F5AC200D69EF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -256,6 +262,8 @@
 				CE6FF8FB1C5B66B000708998 /* AppConstants.m */,
 				55EA48BA1C5D13F700B00080 /* AppUtility.h */,
 				55EA48BB1C5D13F700B00080 /* AppUtility.m */,
+				CE69E8701C5F5D2B00A730BE /* UIColor+AppExtension.h */,
+				CE69E8711C5F5D2B00A730BE /* UIColor+AppExtension.m */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -274,6 +282,8 @@
 			children = (
 				CE784F591C5A1CD2006F7F1C /* StationCell.h */,
 				CE784F5A1C5A1CD2006F7F1C /* StationCell.m */,
+				CE69E8731C5F5DCC00A730BE /* SelectStationCell.h */,
+				CE69E8741C5F5DCC00A730BE /* SelectStationCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -369,6 +379,7 @@
 				55D4C7031C54C718004EEC64 /* DBManager.m in Sources */,
 				55EA48BC1C5D13F700B00080 /* AppUtility.m in Sources */,
 				CE6F0FA11C4F5AC200D69EF1 /* SearchViewController.m in Sources */,
+				CE69E8751C5F5DCC00A730BE /* SelectStationCell.m in Sources */,
 				5506E9EB1C527B6300F1E7B6 /* NSString+Levenshtein.m in Sources */,
 				552AC9B91C5314A000843EFA /* DataSource.m in Sources */,
 				5506E9EA1C527B6300F1E7B6 /* MLPAutoCompleteTextField.m in Sources */,
@@ -380,6 +391,7 @@
 				CE6F0F9E1C4F5AC200D69EF1 /* AppDelegate.m in Sources */,
 				55D4C7151C54CD05004EEC64 /* FMDatabasePool.m in Sources */,
 				55D4C7161C54CD05004EEC64 /* FMDatabaseQueue.m in Sources */,
+				CE69E8721C5F5D2B00A730BE /* UIColor+AppExtension.m in Sources */,
 				CE784F5B1C5A1CD2006F7F1C /* StationCell.m in Sources */,
 				558A1FEF1C5E468D00757644 /* JCAlertView.m in Sources */,
 				55D4C7131C54CD05004EEC64 /* FMDatabase.m in Sources */,

@@ -12,9 +12,13 @@
 #import "DataSource.h"
 #import "DBManager.h"
 #import "StationViewController.h"
+#import "UIColor+AppExtension.h"
 
-@interface SearchViewController : UIViewController<UITextFieldDelegate, MLPAutoCompleteTextFieldDataSource>
+@interface SearchViewController : UIViewController<UITextFieldDelegate, MLPAutoCompleteTextFieldDataSource, UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic, strong) MLPAutoCompleteTextField *stationTF;
 @property(nonatomic, strong) NSString *textInput;
+@property(nonatomic, strong) NSMutableArray *stations;
+@property(nonatomic, strong) UITableView *tableView;
+@property(nonatomic, strong) UILabel *label;
 @end
 

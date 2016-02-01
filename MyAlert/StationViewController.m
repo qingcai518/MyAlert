@@ -11,7 +11,6 @@
 @interface StationViewController ()
 @end
 
-CLLocation *dest;
 double baseLatitude;
 double baseLongitude;
 BOOL iShouldShowAlert;
@@ -19,10 +18,15 @@ BOOL iShouldKeepBuzzing;
 int alertDistance = 500;
 
 @implementation StationViewController
-- (id)initWithStyle:(UITableViewStyle)theStyle data:(NSArray *)data {
+- (id)initWithStyle:(UITableViewStyle)theStyle data:(NSArray *)data stations:(NSMutableArray *)stations {
     self = [super init];
     if (self != nil) {
         self.contents = data;
+        if (stations == nil) {
+            self.selectStations = [[NSMutableArray alloc] init];
+        } else {
+            self.selectStations = stations;
+        }
     }
     return self;
 }
@@ -94,13 +98,7 @@ int alertDistance = 500;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *dic = self.contents[indexPath.row];
-//    NSString *place = [dic valueForKey:@"place"];
-//    NSString *line = [dic valueForKey:@"line"];
     NSString *name = [dic valueForKey:@"name"];
-    double latitude = [[dic valueForKey:@"latitude"] doubleValue];
-    double longitude = [[dic valueForKey:@"longitude"] doubleValue];
-    
-    dest = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
     
     if (self.locationManager == nil) {
         self.locationManager = [[CLLocationManager alloc] init];
@@ -121,11 +119,6 @@ int alertDistance = 500;
     
     //GPSの利用可否判断
     if ([CLLocationManager locationServicesEnabled]) {
-        [self.locationManager startUpdatingLocation];
-        
-        CLLocation *local = self.locationManager.location;
-        CLLocationDistance meters=[local distanceFromLocation:dest];
-        NSLog(@"最初%f", meters);
         [self.navigationController.view makeToast:[NSString stringWithFormat:@"行き先駅を%@に設定しました。", name]
                                          duration:2.0
                                          position:CSToastPositionCenter
@@ -133,6 +126,13 @@ int alertDistance = 500;
                                             image:[UIImage imageNamed:@"sucess.jpg"]
                                             style:nil
                                        completion:nil];
+        [self.navigationController popViewControllerAnimated:YES];
+        
+        [self.selectStations addObject:dic];
+        NSDictionary *dataDict = [NSDictionary dictionaryWithObject:self.selectStations forKey:@"stations"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"RegisterCompletionNotification" object:nil userInfo:dataDict];
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
     } else {
         [self.navigationController.view makeToast:@"Unforunately! The location services is disabled."
                                          duration:2.0
@@ -158,24 +158,56 @@ int alertDistance = 500;
     double longitude = newLocation.coordinate.longitude;
     
     CLLocation *current = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
-    CLLocationDistance distance = [current distanceFromLocation:dest];
-    NSLog(@"経過%f", distance);
     
-    if (distance < alertDistance && iShouldShowAlert) {
-        NSLog(@"もうすぐ到着だよ！%f", distance);
-        iShouldShowAlert = NO;
-        [JCAlertView showTwoButtonsWithTitle:@"My Alert" Message:[NSString stringWithFormat:@"もうすぐ到着だよ!\n後%dメートル",alertDistance] ButtonType:JCAlertViewButtonTypeCancel ButtonTitle:@"閉じる" Click:^{
-            iShouldKeepBuzzing = NO;
+    for (NSDictionary *dic in self.selectStations) {
+        double latitude = [[dic valueForKey:@"latitude"] doubleValue];
+        double longitude = [[dic valueForKey:@"longitude"] doubleValue];
+        CLLocation *dest = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
+        
+        NSString *name = [dic valueForKey:@"name"];
+        CLLocationDistance distance = [current distanceFromLocation:dest];
+        NSLog(@"経過%f", distance);
+        
+        if (distance < alertDistance && iShouldShowAlert) {
+            NSLog(@"もうすぐ%@に到着だよ！%f", name, distance);
             iShouldShowAlert = NO;
-            [self.locationManager stopUpdatingLocation];
-        } ButtonType:JCAlertViewButtonTypeDefault ButtonTitle:@"再通知" Click:^{
-            iShouldKeepBuzzing = NO;
-            iShouldShowAlert = YES;
-            alertDistance = 200;
-        }];
+            
+            
+//            UIApplication *app = [UIApplication sharedApplication];
+//            if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
+//                [app registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+//                
+//            }
+//
+//            UILocalNotification *notification = [[UILocalNotification alloc] init];
+//            NSDate* now = [NSDate dateWithTimeIntervalSinceNow:[[NSTimeZone systemTimeZone] secondsFromGMT] + 30];
+//            notification.fireDate = now;
+//            notification.timeZone = [NSTimeZone localTimeZone];
+//            notification.alertAction = @"title of notification";
+//            notification.alertBody = @"message of notification";
+//            
+//            notification.soundName = UILocalNotificationDefaultSoundName;
+//            notification.applicationIconBadgeNumber = 3;
+//            [app scheduleLocalNotification:notification];
 
-        AudioServicesAddSystemSoundCompletion(kSystemSoundID_Vibrate, NULL, NULL, MyAudioServicesSystemSoundCompletionProc, NULL);
-        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+            [JCAlertView showTwoButtonsWithTitle:@"My Alert" Message:[NSString stringWithFormat:@"もうすぐ%@に到着だよ!\n後%dメートル",name,alertDistance] ButtonType:JCAlertViewButtonTypeCancel ButtonTitle:@"閉じる" Click:^{
+                iShouldKeepBuzzing = NO;
+                iShouldShowAlert = NO;
+                [self.locationManager stopUpdatingLocation];
+                
+                // 削除を実施.
+                [self.selectStations removeObject:dic];
+                NSDictionary *dataDict = [NSDictionary dictionaryWithObject:self.selectStations forKey:@"stations"];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"RegisterCompletionNotification" object:nil userInfo:dataDict];
+            } ButtonType:JCAlertViewButtonTypeDefault ButtonTitle:@"再通知" Click:^{
+                iShouldKeepBuzzing = NO;
+                iShouldShowAlert = YES;
+                alertDistance = 200;
+            }];
+            
+            AudioServicesAddSystemSoundCompletion(kSystemSoundID_Vibrate, NULL, NULL, MyAudioServicesSystemSoundCompletionProc, NULL);
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+        }
     }
 }
 
