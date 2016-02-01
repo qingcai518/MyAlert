@@ -32,13 +32,13 @@
 		55EA48B71C5D115600B00080 /* home@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55EA48B61C5D115600B00080 /* home@2x.jpg */; };
 		55EA48B91C5D13D200B00080 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EA48B81C5D13D200B00080 /* AudioToolbox.framework */; };
 		55EA48BC1C5D13F700B00080 /* AppUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EA48BB1C5D13F700B00080 /* AppUtility.m */; };
+		CE69E8691C5F196500A730BE /* Stations.csv in Resources */ = {isa = PBXBuildFile; fileRef = CE69E8681C5F196500A730BE /* Stations.csv */; };
+		CE69E86B1C5F197500A730BE /* station.db in Resources */ = {isa = PBXBuildFile; fileRef = CE69E86A1C5F197500A730BE /* station.db */; };
 		CE6F0F9E1C4F5AC200D69EF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0F9D1C4F5AC200D69EF1 /* AppDelegate.m */; };
 		CE6F0FA11C4F5AC200D69EF1 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0FA01C4F5AC200D69EF1 /* SearchViewController.m */; };
 		CE6F0FA61C4F5AC200D69EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6F0FA51C4F5AC200D69EF1 /* Assets.xcassets */; };
 		CE6FF8FC1C5B66B000708998 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6FF8FB1C5B66B000708998 /* AppConstants.m */; };
-		CE784F4B1C59E6FF006F7F1C /* station.csv in Resources */ = {isa = PBXBuildFile; fileRef = CE784F4A1C59E6FF006F7F1C /* station.csv */; };
 		CE784F521C59F6FC006F7F1C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE784F511C59F6FC006F7F1C /* CoreLocation.framework */; };
-		CE784F541C5A06F8006F7F1C /* station.db in Resources */ = {isa = PBXBuildFile; fileRef = CE784F531C5A06F8006F7F1C /* station.db */; };
 		CE784F571C5A190C006F7F1C /* StationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE784F561C5A190C006F7F1C /* StationViewController.m */; };
 		CE784F5B1C5A1CD2006F7F1C /* StationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE784F5A1C5A1CD2006F7F1C /* StationCell.m */; };
 /* End PBXBuildFile section */
@@ -84,6 +84,8 @@
 		55EA48B81C5D13D200B00080 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		55EA48BA1C5D13F700B00080 /* AppUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUtility.h; sourceTree = "<group>"; };
 		55EA48BB1C5D13F700B00080 /* AppUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtility.m; sourceTree = "<group>"; };
+		CE69E8681C5F196500A730BE /* Stations.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Stations.csv; sourceTree = "<group>"; };
+		CE69E86A1C5F197500A730BE /* station.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = station.db; sourceTree = "<group>"; };
 		CE6F0F961C4F5AC200D69EF1 /* MyAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6F0F9A1C4F5AC200D69EF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CE6F0F9C1C4F5AC200D69EF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,9 +96,7 @@
 		CE6F0FAA1C4F5AC200D69EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = MyAlert/Info.plist; sourceTree = "<group>"; };
 		CE6FF8FA1C5B66B000708998 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
 		CE6FF8FB1C5B66B000708998 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
-		CE784F4A1C59E6FF006F7F1C /* station.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = station.csv; sourceTree = "<group>"; };
 		CE784F511C59F6FC006F7F1C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		CE784F531C5A06F8006F7F1C /* station.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = station.db; sourceTree = "<group>"; };
 		CE784F551C5A190C006F7F1C /* StationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationViewController.h; sourceTree = "<group>"; };
 		CE784F561C5A190C006F7F1C /* StationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationViewController.m; sourceTree = "<group>"; };
 		CE784F591C5A1CD2006F7F1C /* StationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationCell.h; sourceTree = "<group>"; };
@@ -230,8 +230,8 @@
 		CE6F0F991C4F5AC200D69EF1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CE784F531C5A06F8006F7F1C /* station.db */,
-				CE784F4A1C59E6FF006F7F1C /* station.csv */,
+				CE69E86A1C5F197500A730BE /* station.db */,
+				CE69E8681C5F196500A730BE /* Stations.csv */,
 				CE6F0F9A1C4F5AC200D69EF1 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -309,7 +309,7 @@
 				TargetAttributes = {
 					CE6F0F951C4F5AC200D69EF1 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = M9F5QE5W4U;
+						DevelopmentTeam = 2K794A54P5;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -345,16 +345,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				558A1FEE1C5E468D00757644 /* JCAlertView.bundle in Resources */,
-				CE784F541C5A06F8006F7F1C /* station.db in Resources */,
 				CE6F0FA61C4F5AC200D69EF1 /* Assets.xcassets in Resources */,
 				55EA48B11C5D0F4200B00080 /* sucess@2x.jpg in Resources */,
+				CE69E86B1C5F197500A730BE /* station.db in Resources */,
 				55EA48AF1C5D0F4200B00080 /* fail@2x.jpg in Resources */,
 				55D4C6FF1C54C0F6004EEC64 /* btn_search@2x.png in Resources */,
 				55EA48B71C5D115600B00080 /* home@2x.jpg in Resources */,
 				55D4C7181C54CD05004EEC64 /* Info.plist in Resources */,
 				552AC9BB1C5315BD00843EFA /* station.plist in Resources */,
-				CE784F4B1C59E6FF006F7F1C /* station.csv in Resources */,
 				55EA48B51C5D110600B00080 /* home@2x.png in Resources */,
+				CE69E8691C5F196500A730BE /* Stations.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
