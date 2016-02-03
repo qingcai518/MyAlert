@@ -13,12 +13,13 @@
 #import "StationCell.h"
 #import "UIView+Toast.h"
 #import "JCAlertView.h"
+#import "LocationManagerSingleton.h"
 
 @interface StationViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic, strong) NSArray *contents;
-@property (nonatomic, strong) NSMutableArray *selectStations;
-@property (nonatomic, strong) CLLocationManager *locationManager;
+//@property (nonatomic, strong) NSMutableArray *selectStations;
+//@property (nonatomic, strong) CLLocationManager *locationManager;
 
 - (id)initWithStyle:(UITableViewStyle)theStyle data:(NSArray *)data stations:(NSMutableArray *)stations;
 @end

@@ -7,11 +7,15 @@
 //
 
 #import <MapKit/MapKit.h>
+#import "UIView+Toast.h"
+#import "JCAlertView.h"
+#import <AudioToolbox/AudioServices.h>
 
 @interface LocationManagerSingleton : NSObject <CLLocationManagerDelegate>
-
-@property (nonatomic, strong) CLLocationManager* locationManager;
-
+@property (nonatomic) BOOL iShouldShowAlert;
+@property (nonatomic) BOOL iShouldKeepBuzzing;
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) NSMutableArray *selectStations;
 + (LocationManagerSingleton*)sharedSingleton;
 
 @end
