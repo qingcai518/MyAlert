@@ -166,8 +166,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDictionary *dic = self.stations[indexPath.row];
-
+    
 }
 
 @end

@@ -81,11 +81,7 @@ double baseLongitude;
 }
 
 - (StationCell *)getCell:(int)index tableView:(UITableView *)tableView {
-    NSString *cellId = @"id1";
-    StationCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    if (!cell) {
-        cell = [[StationCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-    }
+    StationCell *cell  = [[StationCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     NSDictionary *dic = self.contents[index];
     [cell setContents:dic];
     return cell;
@@ -136,59 +132,5 @@ double baseLongitude;
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
-//- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-//    CLLocation *newLocation = [locations lastObject];
-//    //緯度
-//    double latitude = newLocation.coordinate.latitude;
-//    double longitude = newLocation.coordinate.longitude;
-//    
-//    CLLocation *current = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
-//    
-//    NSMutableDictionary *distanceDict = [NSMutableDictionary dictionaryWithObject:current forKey:@"currentLocation"];
-//    [[NSNotificationCenter defaultCenter] postNotificationName:@"CurrentLocationNotification" object:nil userInfo:distanceDict];
-//    
-//    for (NSDictionary *dic in self.selectStations) {
-//        double latitude = [[dic valueForKey:@"latitude"] doubleValue];
-//        double longitude = [[dic valueForKey:@"longitude"] doubleValue];
-//        CLLocation *dest = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
-//        
-//        NSString *name = [dic valueForKey:@"name"];
-//        CLLocationDistance distance = [current distanceFromLocation:dest];
-//        NSLog(@"経過%f", distance);
-//        
-//        if (distance < alertDistance && iShouldShowAlert) {
-//            NSLog(@"もうすぐ%@に到着だよ！%f", name, distance);
-//            iShouldShowAlert = NO;
-//
-//            [JCAlertView showTwoButtonsWithTitle:@"My Alert" Message:[NSString stringWithFormat:@"もうすぐ%@に到着だよ!\n後%dメートル",name,alertDistance] ButtonType:JCAlertViewButtonTypeCancel ButtonTitle:@"閉じる" Click:^{
-//                iShouldKeepBuzzing = NO;
-//                iShouldShowAlert = NO;
-//                [self.locationManager stopUpdatingLocation];
-//                
-//                // 削除を実施.
-//                [self.selectStations removeObject:dic];
-//                NSDictionary *dataDict = [NSDictionary dictionaryWithObject:self.selectStations forKey:@"stations"];
-//                [[NSNotificationCenter defaultCenter] postNotificationName:@"RegisterCompletionNotification" object:nil userInfo:dataDict];
-//            } ButtonType:JCAlertViewButtonTypeDefault ButtonTitle:@"再通知" Click:^{
-//                iShouldKeepBuzzing = NO;
-//                iShouldShowAlert = YES;
-//                alertDistance = 200;
-//            }];
-//            
-//            AudioServicesAddSystemSoundCompletion(kSystemSoundID_Vibrate, NULL, NULL, MyAudioServicesSystemSoundCompletionProc, NULL);
-//            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-//        }
-//    }
-//}
-//
-//void MyAudioServicesSystemSoundCompletionProc(SystemSoundID ssID, void *clientData) {
-//    if (iShouldKeepBuzzing) {
-//        [NSThread sleepForTimeInterval:(NSTimeInterval)0.5];
-//        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-//    } else {
-//        AudioServicesRemoveSystemSoundCompletion(kSystemSoundID_Vibrate);
-//    }
-//}
 
 @end

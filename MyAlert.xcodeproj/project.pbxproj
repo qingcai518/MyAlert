@@ -11,6 +11,7 @@
 		5506E9EB1C527B6300F1E7B6 /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = 5506E9E91C527B6300F1E7B6 /* NSString+Levenshtein.m */; };
 		552AC9B91C5314A000843EFA /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 552AC9B81C5314A000843EFA /* DataSource.m */; };
 		552AC9BB1C5315BD00843EFA /* station.plist in Resources */ = {isa = PBXBuildFile; fileRef = 552AC9BA1C5315BD00843EFA /* station.plist */; };
+		553841F31C624B2E000B9657 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 553841F21C624B2E000B9657 /* MapViewController.m */; };
 		558A1FE71C5DBD9000757644 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558A1FE61C5DBD9000757644 /* MapKit.framework */; };
 		558A1FE91C5E422600757644 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558A1FE81C5E422600757644 /* Accelerate.framework */; };
 		558A1FEE1C5E468D00757644 /* JCAlertView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 558A1FEB1C5E468D00757644 /* JCAlertView.bundle */; };
@@ -57,6 +58,8 @@
 		552AC9B71C5314A000843EFA /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		552AC9B81C5314A000843EFA /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 		552AC9BA1C5315BD00843EFA /* station.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = station.plist; sourceTree = "<group>"; };
+		553841F11C624B2E000B9657 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		553841F21C624B2E000B9657 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		558A1FE61C5DBD9000757644 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		558A1FE81C5E422600757644 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		558A1FEB1C5E468D00757644 /* JCAlertView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JCAlertView.bundle; sourceTree = "<group>"; };
@@ -117,10 +120,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				558A1FE71C5DBD9000757644 /* MapKit.framework in Frameworks */,
+				CE784F521C59F6FC006F7F1C /* CoreLocation.framework in Frameworks */,
 				558A1FE91C5E422600757644 /* Accelerate.framework in Frameworks */,
 				55EA48B91C5D13D200B00080 /* AudioToolbox.framework in Frameworks */,
-				CE784F521C59F6FC006F7F1C /* CoreLocation.framework in Frameworks */,
-				558A1FE71C5DBD9000757644 /* MapKit.framework in Frameworks */,
 				55D4C7051C54CCBB004EEC64 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,6 +234,8 @@
 				CE784F561C5A190C006F7F1C /* StationViewController.m */,
 				CE6F0F9F1C4F5AC200D69EF1 /* SearchViewController.h */,
 				CE6F0FA01C4F5AC200D69EF1 /* SearchViewController.m */,
+				553841F11C624B2E000B9657 /* MapViewController.h */,
+				553841F21C624B2E000B9657 /* MapViewController.m */,
 				CE6F0F991C4F5AC200D69EF1 /* Supporting Files */,
 			);
 			path = MyAlert;
@@ -401,6 +406,7 @@
 				CE784F5B1C5A1CD2006F7F1C /* StationCell.m in Sources */,
 				558A1FEF1C5E468D00757644 /* JCAlertView.m in Sources */,
 				55D4C7131C54CD05004EEC64 /* FMDatabase.m in Sources */,
+				553841F31C624B2E000B9657 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

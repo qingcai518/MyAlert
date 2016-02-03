@@ -10,7 +10,7 @@ int alertDistance = 500;
     if(self) {
         self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager.delegate = self;
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
         self.locationManager.distanceFilter = kCLDistanceFilterNone;
         
         if( [[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0 ) {
@@ -19,7 +19,7 @@ int alertDistance = 500;
             //            [self.locationManager requestWhenInUseAuthorization];
             // アプリが非アクティブな場合でも位置取得する場合
             [self.locationManager requestAlwaysAuthorization];
-            [self.locationManager setAllowsBackgroundLocationUpdates:YES];
+            self.locationManager.allowsBackgroundLocationUpdates = YES;
             [self.locationManager startMonitoringSignificantLocationChanges];
         }
         [self.locationManager startUpdatingLocation];
@@ -59,7 +59,7 @@ int alertDistance = 500;
         
         NSString *name = [dic valueForKey:@"name"];
         CLLocationDistance distance = [current distanceFromLocation:dest];
-        NSLog(@"経過%f", distance);
+        NSLog(@"We have %fm from %@", distance, name);
         
         if (distance < alertDistance && self.iShouldShowAlert) {
             NSLog(@"もうすぐ%@に到着だよ！%f", name, distance);
@@ -68,7 +68,6 @@ int alertDistance = 500;
             [JCAlertView showTwoButtonsWithTitle:@"My Alert" Message:[NSString stringWithFormat:@"もうすぐ%@に到着だよ!\n後%dメートル",name,alertDistance] ButtonType:JCAlertViewButtonTypeCancel ButtonTitle:@"閉じる" Click:^{
                 self.iShouldKeepBuzzing = NO;
                 self.iShouldShowAlert = NO;
-                [self.locationManager stopUpdatingLocation];
                 
                 // 削除を実施.
                 [self.selectStations removeObject:dic];
@@ -92,6 +91,7 @@ void MyAudioServicesSystemSoundCompletionProc(SystemSoundID ssID, void *clientDa
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     } else {
         AudioServicesRemoveSystemSoundCompletion(kSystemSoundID_Vibrate);
+        LocationManagerSingleton.sharedSingleton.iShouldKeepBuzzing = YES;
     }
 }
 
