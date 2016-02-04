@@ -19,6 +19,9 @@
 }
 
 - (void) setContents:(NSDictionary *)dic current:(CLLocation*)current {
+    if (dic == nil) {
+        return;
+    }
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     NSString *name = [dic valueForKey:@"name"];
     NSString *line = [dic valueForKey:@"line"];

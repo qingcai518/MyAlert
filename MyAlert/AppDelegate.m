@@ -5,7 +5,7 @@
 //  Created by user on 2016/01/20.
 //  Copyright © 2016年 user. All rights reserved.
 //
-
+@import GoogleMaps;
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -16,6 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [GMSServices provideAPIKey:@"AIzaSyClKYn7V0sSrY_NOPYdwM1NMnfPwI_2Ya8"];
     [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:0.157 green:0.157 blue:1 alpha:1];
     [UINavigationBar appearance].tintColor = [UIColor whiteColor];
     

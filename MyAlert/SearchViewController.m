@@ -63,8 +63,20 @@
     [self.view addSubview:self.tableView];
     [self showParts];
     
-    UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
-    [self.view addGestureRecognizer:tapGesture];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+    tapGesture.delegate = self; // これを追加
+    [self.tableView addGestureRecognizer:tapGesture];
+}
+
+# pragma mark - UITapGestureRecognizer Delegate
+- (void) handleTapGesture:(UITapGestureRecognizer*)sender {
+    [self.view endEditing:YES];
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    // UITapGestureが受け取っていい(= tableViewDidTap: が実行されていい)場合に YESを返す
+    return [self canBecomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,10 +99,6 @@
     [[self navigationController] setNavigationBarHidden:YES animated:NO];
     [self.tableView reloadData];
     [self showParts];
-}
-
-- (void) handleTapGesture:(UITapGestureRecognizer*)sender {
-    [self.view endEditing:YES];
 }
 
 - (void) textFieldChanged {
@@ -166,7 +174,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    MapViewController *nextController = [[MapViewController alloc] init];
+    [self.navigationController pushViewController:nextController animated:YES];
 }
 
 @end

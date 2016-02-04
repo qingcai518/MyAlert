@@ -23,8 +23,6 @@
     NSString *name = [dic valueForKey:@"name"];
     NSString *line = [dic valueForKey:@"line"];
     NSString *place = [dic valueForKey:@"place"];
-//    double latitude = [[dic valueForKey:@"latitude"]doubleValue];
-//    double longitude = [[dic valueForKey:@"longitude"]doubleValue];
 
     UILabel *nameLbl = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, width, 20)];
     nameLbl.text = name;

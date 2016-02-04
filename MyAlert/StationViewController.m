@@ -13,20 +13,12 @@
 
 double baseLatitude;
 double baseLongitude;
-//BOOL iShouldShowAlert;
-//BOOL iShouldKeepBuzzing;
-//int alertDistance = 500;
 
 @implementation StationViewController
 - (id)initWithStyle:(UITableViewStyle)theStyle data:(NSArray *)data stations:(NSMutableArray *)stations {
     self = [super init];
     if (self != nil) {
         self.contents = data;
-//        if (stations == nil) {
-//            self.selectStations = [[NSMutableArray alloc] init];
-//        } else {
-//            self.selectStations = stations;
-//        }
     }
     return self;
 }

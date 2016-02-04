@@ -33,6 +33,7 @@
 		55EA48B71C5D115600B00080 /* home@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55EA48B61C5D115600B00080 /* home@2x.jpg */; };
 		55EA48B91C5D13D200B00080 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EA48B81C5D13D200B00080 /* AudioToolbox.framework */; };
 		55EA48BC1C5D13F700B00080 /* AppUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EA48BB1C5D13F700B00080 /* AppUtility.m */; };
+		66138E77C1C4302BB66894BE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B470774658DD46A805E338 /* libPods.a */; };
 		CE69E8691C5F196500A730BE /* Stations.csv in Resources */ = {isa = PBXBuildFile; fileRef = CE69E8681C5F196500A730BE /* Stations.csv */; };
 		CE69E86B1C5F197500A730BE /* station.db in Resources */ = {isa = PBXBuildFile; fileRef = CE69E86A1C5F197500A730BE /* station.db */; };
 		CE69E8721C5F5D2B00A730BE /* UIColor+AppExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CE69E8711C5F5D2B00A730BE /* UIColor+AppExtension.m */; };
@@ -45,9 +46,11 @@
 		CE784F521C59F6FC006F7F1C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE784F511C59F6FC006F7F1C /* CoreLocation.framework */; };
 		CE784F571C5A190C006F7F1C /* StationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE784F561C5A190C006F7F1C /* StationViewController.m */; };
 		CE784F5B1C5A1CD2006F7F1C /* StationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE784F5A1C5A1CD2006F7F1C /* StationCell.m */; };
+		CEC510A11C6359B700C9D65F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CEC510A01C6359B700C9D65F /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14CA99FDBBCDFEB11ED1FC0F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5506E9E31C527B6300F1E7B6 /* MLPAutoCompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextField.h; sourceTree = "<group>"; };
 		5506E9E41C527B6300F1E7B6 /* MLPAutoCompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPAutoCompleteTextField.m; sourceTree = "<group>"; };
 		5506E9E51C527B6300F1E7B6 /* MLPAutoCompleteTextFieldDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDataSource.h; sourceTree = "<group>"; };
@@ -90,6 +93,7 @@
 		55EA48B81C5D13D200B00080 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		55EA48BA1C5D13F700B00080 /* AppUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUtility.h; sourceTree = "<group>"; };
 		55EA48BB1C5D13F700B00080 /* AppUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtility.m; sourceTree = "<group>"; };
+		9666AF021909312D372B168D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CE69E8681C5F196500A730BE /* Stations.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Stations.csv; sourceTree = "<group>"; };
 		CE69E86A1C5F197500A730BE /* station.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = station.db; sourceTree = "<group>"; };
 		CE69E8701C5F5D2B00A730BE /* UIColor+AppExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AppExtension.h"; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 		CE784F561C5A190C006F7F1C /* StationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationViewController.m; sourceTree = "<group>"; };
 		CE784F591C5A1CD2006F7F1C /* StationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationCell.h; sourceTree = "<group>"; };
 		CE784F5A1C5A1CD2006F7F1C /* StationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationCell.m; sourceTree = "<group>"; };
+		CEC510A01C6359B700C9D65F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D8B470774658DD46A805E338 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,7 @@
 				558A1FE91C5E422600757644 /* Accelerate.framework in Frameworks */,
 				55EA48B91C5D13D200B00080 /* AudioToolbox.framework in Frameworks */,
 				55D4C7051C54CCBB004EEC64 /* libsqlite3.tbd in Frameworks */,
+				66138E77C1C4302BB66894BE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,17 +200,28 @@
 			path = fmdb;
 			sourceTree = "<group>";
 		};
+		B3C284E6B7EB9EDE73FA7DAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8B470774658DD46A805E338 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE6F0F8D1C4F5AC200D69EF1 = {
 			isa = PBXGroup;
 			children = (
+				CEC510A01C6359B700C9D65F /* Podfile */,
 				558A1FE81C5E422600757644 /* Accelerate.framework */,
-				558A1FE61C5DBD9000757644 /* MapKit.framework */,
 				55EA48B81C5D13D200B00080 /* AudioToolbox.framework */,
 				CE784F511C59F6FC006F7F1C /* CoreLocation.framework */,
+				558A1FE61C5DBD9000757644 /* MapKit.framework */,
+				CE6F0FAA1C4F5AC200D69EF1 /* Info.plist */,
 				55D4C7041C54CCBB004EEC64 /* libsqlite3.tbd */,
 				CE6F0FA51C4F5AC200D69EF1 /* Assets.xcassets */,
-				CE6F0FAA1C4F5AC200D69EF1 /* Info.plist */,
+				B3C284E6B7EB9EDE73FA7DAC /* Frameworks */,
 				CE6F0F981C4F5AC200D69EF1 /* MyAlert */,
+				F00887F97C3ABCE18A12B3BB /* Pods */,
 				CE6F0F971C4F5AC200D69EF1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -219,24 +237,14 @@
 		CE6F0F981C4F5AC200D69EF1 /* MyAlert */ = {
 			isa = PBXGroup;
 			children = (
-				558A1FEA1C5E468D00757644 /* JCAlertView */,
-				CE6FF8FD1C5B6E7D00708998 /* Toast */,
-				CE6FF8F91C5B669800708998 /* Utility */,
-				CE784F581C5A1CBA006F7F1C /* Cell */,
-				552AC9B61C53147000843EFA /* Datasource */,
-				55D4C7001C54C702004EEC64 /* DBManager */,
-				55D4C7061C54CD05004EEC64 /* fmdb */,
-				CE6F0FBA1C4F77DB00D69EF1 /* image */,
-				5506E9E21C527B6300F1E7B6 /* MLPAutoCompleteTextField */,
 				CE6F0F9C1C4F5AC200D69EF1 /* AppDelegate.h */,
 				CE6F0F9D1C4F5AC200D69EF1 /* AppDelegate.m */,
-				CE784F551C5A190C006F7F1C /* StationViewController.h */,
-				CE784F561C5A190C006F7F1C /* StationViewController.m */,
-				CE6F0F9F1C4F5AC200D69EF1 /* SearchViewController.h */,
-				CE6F0FA01C4F5AC200D69EF1 /* SearchViewController.m */,
-				553841F11C624B2E000B9657 /* MapViewController.h */,
-				553841F21C624B2E000B9657 /* MapViewController.m */,
+				CEC510AB1C63633600C9D65F /* Library */,
+				CEC510AC1C63638700C9D65F /* PageHome */,
+				CEC510AE1C6363E700C9D65F /* PageMap */,
+				CEC510AD1C6363B300C9D65F /* PageStations */,
 				CE6F0F991C4F5AC200D69EF1 /* Supporting Files */,
+				CE6FF8F91C5B669800708998 /* Utility */,
 			);
 			path = MyAlert;
 			sourceTree = "<group>";
@@ -244,6 +252,7 @@
 		CE6F0F991C4F5AC200D69EF1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE6F0FBA1C4F77DB00D69EF1 /* image */,
 				CE69E86A1C5F197500A730BE /* station.db */,
 				CE69E8681C5F196500A730BE /* Stations.csv */,
 				CE6F0F9A1C4F5AC200D69EF1 /* main.m */,
@@ -266,6 +275,8 @@
 		CE6FF8F91C5B669800708998 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				55D4C7001C54C702004EEC64 /* DBManager */,
+				552AC9B61C53147000843EFA /* Datasource */,
 				CE6FF8FA1C5B66B000708998 /* AppConstants.h */,
 				CE6FF8FB1C5B66B000708998 /* AppConstants.m */,
 				55EA48BA1C5D13F700B00080 /* AppUtility.h */,
@@ -287,15 +298,55 @@
 			path = Toast;
 			sourceTree = "<group>";
 		};
-		CE784F581C5A1CBA006F7F1C /* Cell */ = {
+		CEC510AB1C63633600C9D65F /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				55D4C7061C54CD05004EEC64 /* fmdb */,
+				558A1FEA1C5E468D00757644 /* JCAlertView */,
+				5506E9E21C527B6300F1E7B6 /* MLPAutoCompleteTextField */,
+				CE6FF8FD1C5B6E7D00708998 /* Toast */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		CEC510AC1C63638700C9D65F /* PageHome */ = {
+			isa = PBXGroup;
+			children = (
+				CE69E8731C5F5DCC00A730BE /* SelectStationCell.h */,
+				CE69E8741C5F5DCC00A730BE /* SelectStationCell.m */,
+				CE6F0F9F1C4F5AC200D69EF1 /* SearchViewController.h */,
+				CE6F0FA01C4F5AC200D69EF1 /* SearchViewController.m */,
+			);
+			name = PageHome;
+			sourceTree = "<group>";
+		};
+		CEC510AD1C6363B300C9D65F /* PageStations */ = {
 			isa = PBXGroup;
 			children = (
 				CE784F591C5A1CD2006F7F1C /* StationCell.h */,
 				CE784F5A1C5A1CD2006F7F1C /* StationCell.m */,
-				CE69E8731C5F5DCC00A730BE /* SelectStationCell.h */,
-				CE69E8741C5F5DCC00A730BE /* SelectStationCell.m */,
+				CE784F551C5A190C006F7F1C /* StationViewController.h */,
+				CE784F561C5A190C006F7F1C /* StationViewController.m */,
 			);
-			name = Cell;
+			name = PageStations;
+			sourceTree = "<group>";
+		};
+		CEC510AE1C6363E700C9D65F /* PageMap */ = {
+			isa = PBXGroup;
+			children = (
+				553841F11C624B2E000B9657 /* MapViewController.h */,
+				553841F21C624B2E000B9657 /* MapViewController.m */,
+			);
+			name = PageMap;
+			sourceTree = "<group>";
+		};
+		F00887F97C3ABCE18A12B3BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9666AF021909312D372B168D /* Pods.debug.xcconfig */,
+				14CA99FDBBCDFEB11ED1FC0F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,9 +356,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE6F0FAD1C4F5AC200D69EF1 /* Build configuration list for PBXNativeTarget "MyAlert" */;
 			buildPhases = (
+				4B77BA944E41BE3104C808EB /* Check Pods Manifest.lock */,
 				CE6F0F921C4F5AC200D69EF1 /* Sources */,
 				CE6F0F931C4F5AC200D69EF1 /* Frameworks */,
 				CE6F0F941C4F5AC200D69EF1 /* Resources */,
+				2B604367EAEBB83E1EF6AC1C /* Embed Pods Frameworks */,
+				4652BDE77B3B25790504FAF7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -329,7 +383,7 @@
 				TargetAttributes = {
 					CE6F0F951C4F5AC200D69EF1 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = M9F5QE5W4U;
+						DevelopmentTeam = 2K794A54P5;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -364,6 +418,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC510A11C6359B700C9D65F /* Podfile in Resources */,
 				558A1FEE1C5E468D00757644 /* JCAlertView.bundle in Resources */,
 				CE6F0FA61C4F5AC200D69EF1 /* Assets.xcassets in Resources */,
 				55EA48B11C5D0F4200B00080 /* sucess@2x.jpg in Resources */,
@@ -379,6 +434,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B604367EAEBB83E1EF6AC1C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4652BDE77B3B25790504FAF7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B77BA944E41BE3104C808EB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE6F0F921C4F5AC200D69EF1 /* Sources */ = {
@@ -495,6 +598,7 @@
 		};
 		CE6F0FAE1C4F5AC200D69EF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9666AF021909312D372B168D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -510,6 +614,7 @@
 		};
 		CE6F0FAF1C4F5AC200D69EF1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14CA99FDBBCDFEB11ED1FC0F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

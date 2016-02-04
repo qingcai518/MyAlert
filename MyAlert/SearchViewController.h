@@ -14,8 +14,9 @@
 #import "StationViewController.h"
 #import "UIColor+AppExtension.h"
 #import "SelectStationCell.h"
+#import "MapViewController.h"
 
-@interface SearchViewController : UIViewController<UITextFieldDelegate, MLPAutoCompleteTextFieldDataSource, UITableViewDataSource, UITableViewDelegate>
+@interface SearchViewController : UIViewController<UITextFieldDelegate, MLPAutoCompleteTextFieldDataSource, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 @property(nonatomic, strong) MLPAutoCompleteTextField *stationTF;
 @property(nonatomic, strong) NSString *textInput;
 @property(nonatomic, strong) NSMutableArray *stations;
