@@ -43,6 +43,7 @@
 		CE6F0FA11C4F5AC200D69EF1 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0FA01C4F5AC200D69EF1 /* SearchViewController.m */; };
 		CE6F0FA61C4F5AC200D69EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6F0FA51C4F5AC200D69EF1 /* Assets.xcassets */; };
 		CE6FF8FC1C5B66B000708998 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6FF8FB1C5B66B000708998 /* AppConstants.m */; };
+		CE7672861C648147002AE3F8 /* arrow_tablecell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7672851C648147002AE3F8 /* arrow_tablecell@2x.png */; };
 		CE784F521C59F6FC006F7F1C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE784F511C59F6FC006F7F1C /* CoreLocation.framework */; };
 		CE784F571C5A190C006F7F1C /* StationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE784F561C5A190C006F7F1C /* StationViewController.m */; };
 		CE784F5B1C5A1CD2006F7F1C /* StationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE784F5A1C5A1CD2006F7F1C /* StationCell.m */; };
@@ -112,6 +113,7 @@
 		CE6F0FAA1C4F5AC200D69EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = MyAlert/Info.plist; sourceTree = "<group>"; };
 		CE6FF8FA1C5B66B000708998 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
 		CE6FF8FB1C5B66B000708998 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
+		CE7672851C648147002AE3F8 /* arrow_tablecell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_tablecell@2x.png"; sourceTree = "<group>"; };
 		CE784F511C59F6FC006F7F1C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CE784F551C5A190C006F7F1C /* StationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationViewController.h; sourceTree = "<group>"; };
 		CE784F561C5A190C006F7F1C /* StationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationViewController.m; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 		CE6F0FBA1C4F77DB00D69EF1 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				CE7672851C648147002AE3F8 /* arrow_tablecell@2x.png */,
 				55EA48B61C5D115600B00080 /* home@2x.jpg */,
 				55EA48B41C5D110600B00080 /* home@2x.png */,
 				55EA48AC1C5D0F4200B00080 /* fail@2x.jpg */,
@@ -430,6 +433,7 @@
 				552AC9BB1C5315BD00843EFA /* station.plist in Resources */,
 				55EA48B51C5D110600B00080 /* home@2x.png in Resources */,
 				CE69E8691C5F196500A730BE /* Stations.csv in Resources */,
+				CE7672861C648147002AE3F8 /* arrow_tablecell@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,7 +608,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyAlert/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uluru.MyAlert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -620,7 +624,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyAlert/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uluru.MyAlert;
 				PRODUCT_NAME = "$(TARGET_NAME)";

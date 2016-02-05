@@ -15,7 +15,7 @@ double baseLatitude;
 double baseLongitude;
 
 @implementation StationViewController
-- (id)initWithStyle:(UITableViewStyle)theStyle data:(NSArray *)data stations:(NSMutableArray *)stations {
+- (id)initWithStyle:(UITableViewStyle)theStyle data:(NSArray *)data {
     self = [super init];
     if (self != nil) {
         self.contents = data;
@@ -87,7 +87,20 @@ double baseLongitude;
 {
     NSDictionary *dic = self.contents[indexPath.row];
     NSString *name = [dic valueForKey:@"name"];
-
+    NSString *place = [dic valueForKey:@"place"];
+    NSString *line = [dic valueForKey:@"line"];
+    
+    for (NSDictionary *station in LocationManagerSingleton.sharedSingleton.selectStations) {
+        NSString *stationName = [station valueForKey:@"name"];
+        NSString *stationPlace = [station valueForKey:@"place"];
+        NSString *stationLine = [station valueForKey:@"line"];
+        
+        if ([name isEqualToString:stationName] && [place isEqualToString:stationPlace] && [line isEqualToString:stationLine]) {
+                    [JCAlertView showOneButtonWithTitle:@"My Alert" Message:@"すでに指定してあります。" ButtonType:JCAlertViewButtonTypeDefault ButtonTitle:@"OK" Click:^{}];
+            return;
+        }
+    }
+    
     CLLocationManager *locationManager = LocationManagerSingleton.sharedSingleton.locationManager;
     
     //GPSの利用可否判断
@@ -102,8 +115,8 @@ double baseLongitude;
         [self.navigationController popViewControllerAnimated:YES];
         
         [LocationManagerSingleton.sharedSingleton.selectStations addObject:dic];
-        NSMutableDictionary *dataDict = [NSMutableDictionary dictionaryWithObject:LocationManagerSingleton.sharedSingleton.selectStations forKey:@"stations"];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"RegisterCompletionNotification" object:nil userInfo:dataDict];
+        //        NSMutableDictionary *dataDict = [NSMutableDictionary dictionaryWithObject:LocationManagerSingleton.sharedSingleton.selectStations forKey:@"stations"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"RegisterCompletionNotification" object:nil userInfo:nil];
         
         NSMutableDictionary *distanceDict = [NSMutableDictionary dictionaryWithObject:locationManager.location  forKey:@"currentLocation"];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"CurrentLocationNotification" object:nil userInfo:distanceDict];

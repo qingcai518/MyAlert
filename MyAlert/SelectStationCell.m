@@ -13,7 +13,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self !=nil) {
-        _height = 65;
+        _height = 66;
     }
     return self;
 }
@@ -41,7 +41,6 @@
         } else {
             distanceStr = [NSString stringWithFormat:@"%.2fm", distance];
         }
-//        distanceStr = [NSString stringWithFormat:@"%.5fm", distance];
     }
     
     UILabel *distanceLbl = [[UILabel alloc] initWithFrame:CGRectMake(200, 10, width - 200 - 50, 20)];
@@ -49,6 +48,11 @@
     distanceLbl.font = [UIFont fontWithName:@"Avenir-Light" size:15];
     distanceLbl.textColor = [UIColor blueColor];
     [self addSubview:distanceLbl];
+    
+    UIImage *rightArrow = [UIImage imageNamed:@"arrow_tablecell.png"];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(distanceLbl.frame), (_height - rightArrow.size.height)/2, rightArrow.size.width, rightArrow.size.height)];
+    imageView.image = rightArrow;
+    [self addSubview:imageView];
     
     UILabel *nameLbl = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, width - 200 - 20, 20)];
     nameLbl.text = name;
@@ -61,6 +65,8 @@
     infoLbl.textColor = [UIColor grayColor];
     infoLbl.font = [UIFont fontWithName:@"Avenir-Light" size:15];
     [self addSubview:infoLbl];
+    
+    self.backgroundColor = [UIColor selectStationColor];
 }
 
 @end

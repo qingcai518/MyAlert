@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "UIColor+AppExtension.h"
 
 @interface SelectStationCell : UITableViewCell
 @property (nonatomic, assign) CGFloat height;
