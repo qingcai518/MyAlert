@@ -10,14 +10,11 @@ int alertDistance = 500;
     if(self) {
         self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager.delegate = self;
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+//        self.locationManager.distanceFilter = 100;
         self.locationManager.distanceFilter = kCLDistanceFilterNone;
         
         if( [[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0 ) {
-            // iOS8の場合は、以下の何れかの処理を追加しないと位置の取得ができない
-            // アプリがアクティブな場合だけ位置取得する場合
-            //            [self.locationManager requestWhenInUseAuthorization];
-            // アプリが非アクティブな場合でも位置取得する場合
             [self.locationManager requestAlwaysAuthorization];
             self.locationManager.allowsBackgroundLocationUpdates = YES;
             [self.locationManager startMonitoringSignificantLocationChanges];
@@ -44,9 +41,10 @@ int alertDistance = 500;
     return sharedSingleton;
 }
 
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-    double latitude = newLocation.coordinate.latitude;
-    double longitude = newLocation.coordinate.longitude;
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+    CLLocation *location=[locations firstObject];//取出第一个位置
+    double latitude = location.coordinate.latitude;
+    double longitude = location.coordinate.longitude;
     CLLocation *current = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
     
     NSMutableDictionary *distanceDict = [NSMutableDictionary dictionaryWithObject:current forKey:@"currentLocation"];
@@ -71,8 +69,8 @@ int alertDistance = 500;
                 
                 // 削除を実施.
                 [self.selectStations removeObject:dic];
-                NSDictionary *dataDict = [NSDictionary dictionaryWithObject:self.selectStations forKey:@"stations"];
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"RegisterCompletionNotification" object:nil userInfo:dataDict];
+//                NSDictionary *dataDict = [NSDictionary dictionaryWithObject:self.selectStations forKey:@"stations"];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"RegisterCompletionNotification" object:nil userInfo:nil];
             } ButtonType:JCAlertViewButtonTypeDefault ButtonTitle:@"再通知" Click:^{
                 self.iShouldKeepBuzzing = NO;
                 self.iShouldShowAlert = YES;

@@ -6,7 +6,7 @@
 //  Copyright © 2016年 user. All rights reserved.
 //
 
-#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 #import "UIView+Toast.h"
 #import "JCAlertView.h"
 #import <AudioToolbox/AudioServices.h>

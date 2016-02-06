@@ -10,7 +10,6 @@
 @interface SearchViewController ()
 @end
 @implementation SearchViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(registerCompletion:) name:@"RegisterCompletionNotification" object:nil];
@@ -86,7 +85,7 @@
 }
 
 - (void) showParts {
-    if (self.stations == nil || self.stations.count <= 0) {
+    if (LocationManagerSingleton.sharedSingleton.selectStations == nil || LocationManagerSingleton.sharedSingleton.selectStations.count <= 0) {
         self.tableView.hidden = YES;
         self.label.hidden = YES;
     } else {
@@ -106,10 +105,17 @@
 }
 
 - (void) doSearch {
+    if (self.stationTF.text == nil || [self.stationTF.text isEqualToString:@""]) {
+        [JCAlertView showOneButtonWithTitle:@"My Alert" Message:@"駅名を入力してください。" ButtonType:JCAlertViewButtonTypeDefault ButtonTitle:@"OK" Click:^{}];
+        return;
+    }
     NSMutableArray *array = [DBManager getInfoByStationName:self.textInput];
     if (array.count > 0) {
-        StationViewController *nextController =  [[StationViewController alloc] initWithStyle:UITableViewStylePlain data:array stations:self.stations];
+        self.stationTF.text = @"";
+        StationViewController *nextController =  [[StationViewController alloc] initWithStyle:UITableViewStylePlain data:array];
         [self.navigationController pushViewController:nextController animated:YES];
+    } else {
+        [JCAlertView showOneButtonWithTitle:@"My Alert" Message:@"入力した駅名が見つかりませんでした。" ButtonType:JCAlertViewButtonTypeDefault ButtonTitle:@"OK" Click:^{}];
     }
 }
 
@@ -136,7 +142,6 @@
 }
 
 -(void)registerCompletion:(NSNotification*)notification {
-    self.stations = [[notification userInfo] valueForKey:@"stations"];
     [self.tableView reloadData];
     [self showParts];
 }
@@ -153,7 +158,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.stations.count;
+    return LocationManagerSingleton.sharedSingleton.selectStations.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -167,7 +172,7 @@
 
 - (SelectStationCell *)getCell:(int)index tableView:(UITableView *)tableView {
     SelectStationCell *cell = [[SelectStationCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-    NSDictionary *dic = self.stations[index];
+    NSDictionary *dic = LocationManagerSingleton.sharedSingleton.selectStations[index];
     [cell setContents:dic current:self.current];
     return cell;
 }

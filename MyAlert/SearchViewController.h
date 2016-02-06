@@ -14,12 +14,13 @@
 #import "StationViewController.h"
 #import "UIColor+AppExtension.h"
 #import "SelectStationCell.h"
+#import "JCAlertView.h"
 #import "MapViewController.h"
+#import "LocationManagerSingleton.h"
 
 @interface SearchViewController : UIViewController<UITextFieldDelegate, MLPAutoCompleteTextFieldDataSource, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 @property(nonatomic, strong) MLPAutoCompleteTextField *stationTF;
 @property(nonatomic, strong) NSString *textInput;
-@property(nonatomic, strong) NSMutableArray *stations;
 @property(nonatomic, strong) CLLocation *current;
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) UILabel *label;

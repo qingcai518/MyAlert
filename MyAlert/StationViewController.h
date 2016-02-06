@@ -17,5 +17,5 @@
 
 @interface StationViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
 @property (nonatomic, strong) NSArray *contents;
-- (id)initWithStyle:(UITableViewStyle)theStyle data:(NSArray *)data stations:(NSMutableArray *)stations;
+- (id)initWithStyle:(UITableViewStyle)theStyle data:(NSArray *)data;
 @end
