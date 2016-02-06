@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LocationManagerSingleton.h"
 
 @interface MapViewController : UIViewController
-
+- (instancetype) init:(NSInteger) pos;
 @end

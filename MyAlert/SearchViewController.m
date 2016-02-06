@@ -174,7 +174,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MapViewController *nextController = [[MapViewController alloc] init];
+    MapViewController *nextController = [[MapViewController alloc] init:indexPath.row];
     [self.navigationController pushViewController:nextController animated:YES];
 }
 
