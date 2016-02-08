@@ -25,7 +25,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
     
+    CGRect rect = [[UIScreen mainScreen] bounds];
+    UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(10, 100, rect.size.width - 20, 60)];
+    title.font = [UIFont fontWithName:@"Verdana" size:40];
+    title.textColor = [UIColor whiteColor];
+    title.text = @"直线距离";
+    title.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:title];
+
     CLLocationManager *locationManager = LocationManagerSingleton.sharedSingleton.locationManager;
     position = locationManager.location.coordinate;
 
@@ -33,9 +42,9 @@
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:position.latitude
                                                             longitude:position.longitude
                                                                  zoom:10];
-    mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+    mapView = [GMSMapView mapWithFrame:self.view.frame camera: camera];
     mapView.myLocationEnabled = YES;
-    self.view = mapView;
+    [self.view addSubview:mapView];
 //    [mapView addObserver:self forKeyPath:@"MyLocation" options:NSKeyValueObservingOptionNew context:nil];
 }
 
