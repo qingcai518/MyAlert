@@ -246,7 +246,7 @@
 				CEC510AE1C6363E700C9D65F /* PageMap */,
 				CEC510AD1C6363B300C9D65F /* PageStations */,
 				CE6F0F991C4F5AC200D69EF1 /* Supporting Files */,
-				CE6FF8F91C5B669800708998 /* Utility */,
+				CE6FF8F91C5B669800708998 /* Common */,
 			);
 			path = MyAlert;
 			sourceTree = "<group>";
@@ -275,7 +275,7 @@
 			path = image;
 			sourceTree = "<group>";
 		};
-		CE6FF8F91C5B669800708998 /* Utility */ = {
+		CE6FF8F91C5B669800708998 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				55D4C7001C54C702004EEC64 /* DBManager */,
@@ -289,7 +289,7 @@
 				CE6DFF551C60C9C3005C7387 /* LocationManagerSingleton.h */,
 				CE6DFF561C60C9C3005C7387 /* LocationManagerSingleton.m */,
 			);
-			name = Utility;
+			name = Common;
 			sourceTree = "<group>";
 		};
 		CE6FF8FD1C5B6E7D00708998 /* Toast */ = {

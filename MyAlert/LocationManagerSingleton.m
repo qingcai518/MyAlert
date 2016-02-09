@@ -1,7 +1,7 @@
 #import "LocationManagerSingleton.h"
 
 @implementation LocationManagerSingleton
-int alertDistance = 500;
+int alertDistance = 800;
 @synthesize locationManager;
 
 - (id)init {
@@ -11,7 +11,6 @@ int alertDistance = 500;
         self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager.delegate = self;
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-//        self.locationManager.distanceFilter = 100;
         self.locationManager.distanceFilter = kCLDistanceFilterNone;
         
         if( [[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0 ) {
@@ -69,12 +68,12 @@ int alertDistance = 500;
                 
                 // 削除を実施.
                 [self.selectStations removeObject:dic];
-//                NSDictionary *dataDict = [NSDictionary dictionaryWithObject:self.selectStations forKey:@"stations"];
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"RegisterCompletionNotification" object:nil userInfo:nil];
+                alertDistance = 800;
             } ButtonType:JCAlertViewButtonTypeDefault ButtonTitle:@"再通知" Click:^{
                 self.iShouldKeepBuzzing = NO;
                 self.iShouldShowAlert = YES;
-                alertDistance = 200;
+                alertDistance -= 200;
             }];
             
             AudioServicesAddSystemSoundCompletion(kSystemSoundID_Vibrate, NULL, NULL, MyAudioServicesSystemSoundCompletionProc, NULL);
