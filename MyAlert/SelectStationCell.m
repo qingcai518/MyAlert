@@ -43,15 +43,17 @@
         }
     }
     
-    UILabel *distanceLbl = [[UILabel alloc] initWithFrame:CGRectMake(200, 10, width - 200 - 50, 20)];
+    UILabel *distanceLbl = [[UILabel alloc] initWithFrame:CGRectMake(200, 10, 80, 20)];
     distanceLbl.text = distanceStr;
     distanceLbl.font = [UIFont fontWithName:@"Avenir-Light" size:15];
     distanceLbl.textColor = [UIColor blueColor];
     [self addSubview:distanceLbl];
     
     UIImage *rightArrow = [UIImage imageNamed:@"arrow_tablecell.png"];
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(distanceLbl.frame), (_height - rightArrow.size.height)/2, rightArrow.size.width, rightArrow.size.height)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(distanceLbl.frame) + 5, 33 - rightArrow.size.height / 2, rightArrow.size.width, rightArrow.size.height)];
     imageView.image = rightArrow;
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    imageView.clipsToBounds = YES;
     [self addSubview:imageView];
     
     UILabel *nameLbl = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, width - 200 - 20, 20)];
